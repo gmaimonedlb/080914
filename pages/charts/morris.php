@@ -2,16 +2,18 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>AdminLTE | Dashboard</title>
+        <title>AdminLTE | Morris.js Charts</title>
         <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
         <!-- bootstrap 3.0.2 -->
-        <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+        <link href="../../css/bootstrap.min.css" rel="stylesheet" type="text/css" />
         <!-- font Awesome -->
-        <link href="css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+        <link href="../../css/font-awesome.min.css" rel="stylesheet" type="text/css" />
         <!-- Ionicons -->
-        <link href="css/ionicons.min.css" rel="stylesheet" type="text/css" />
+        <link href="../../css/ionicons.min.css" rel="stylesheet" type="text/css" />
+        <!-- Morris charts -->
+        <link href="../../css/morris/morris.css" rel="stylesheet" type="text/css" />
         <!-- Theme style -->
-        <link href="css/AdminLTE.css" rel="stylesheet" type="text/css" />
+        <link href="../../css/AdminLTE.css" rel="stylesheet" type="text/css" />
 
         <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
         <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -23,7 +25,7 @@
     <body class="skin-blue">
         <!-- header logo: style can be found in header.less -->
         <header class="header">
-            <a href="index2.php" class="logo">
+            <a href="../../index2.php" class="logo">
                 <!-- Add the class icon to your logo image or logo icon to add the margining -->
                 AdminLTE
             </a>
@@ -52,7 +54,7 @@
                                         <li><!-- start message -->
                                             <a href="#">
                                                 <div class="pull-left">
-                                                    <img src="img/avatar3.png" class="img-circle" alt="User Image"/>
+                                                    <img src="../../img/avatar3.png" class="img-circle" alt="User Image"/>
                                                 </div>
                                                 <h4>
                                                     Support Team
@@ -64,7 +66,7 @@
                                         <li>
                                             <a href="#">
                                                 <div class="pull-left">
-                                                    <img src="img/avatar2.png" class="img-circle" alt="user image"/>
+                                                    <img src="../../img/avatar2.png" class="img-circle" alt="user image"/>
                                                 </div>
                                                 <h4>
                                                     AdminLTE Design Team
@@ -76,7 +78,7 @@
                                         <li>
                                             <a href="#">
                                                 <div class="pull-left">
-                                                    <img src="img/avatar.png" class="img-circle" alt="user image"/>
+                                                    <img src="../../img/avatar.png" class="img-circle" alt="user image"/>
                                                 </div>
                                                 <h4>
                                                     Developers
@@ -88,7 +90,7 @@
                                         <li>
                                             <a href="#">
                                                 <div class="pull-left">
-                                                    <img src="img/avatar2.png" class="img-circle" alt="user image"/>
+                                                    <img src="../../img/avatar2.png" class="img-circle" alt="user image"/>
                                                 </div>
                                                 <h4>
                                                     Sales Department
@@ -100,7 +102,7 @@
                                         <li>
                                             <a href="#">
                                                 <div class="pull-left">
-                                                    <img src="img/avatar.png" class="img-circle" alt="user image"/>
+                                                    <img src="../../img/avatar.png" class="img-circle" alt="user image"/>
                                                 </div>
                                                 <h4>
                                                     Reviewers
@@ -235,7 +237,7 @@
                             <ul class="dropdown-menu">
                                 <!-- User image -->
                                 <li class="user-header bg-light-blue">
-                                    <img src="img/avatar3.png" class="img-circle" alt="User Image" />
+                                    <img src="../../img/avatar3.png" class="img-circle" alt="User Image" />
                                     <p>
                                         Jane Doe - Web Developer
                                         <small>Member since Nov. 2012</small>
@@ -270,13 +272,13 @@
         </header>
         <div class="wrapper row-offcanvas row-offcanvas-left">
             <!-- Left side column. contains the logo and sidebar -->
-            <aside class="left-side sidebar-offcanvas">                
+            <aside class="left-side sidebar-offcanvas">
                 <!-- sidebar: style can be found in sidebar.less -->
                 <section class="sidebar">
                     <!-- Sidebar user panel -->
                     <div class="user-panel">
                         <div class="pull-left image">
-                            <img src="img/avatar3.png" class="img-circle" alt="User Image" />
+                            <img src="../../img/avatar3.png" class="img-circle" alt="User Image" />
                         </div>
                         <div class="pull-left info">
                             <p>Hello, Jane</p>
@@ -296,26 +298,26 @@
                     <!-- /.search form -->
                     <!-- sidebar menu: : style can be found in sidebar.less -->
                     <ul class="sidebar-menu">
-                        <li class="active">
-                            <a href="index2.php">
+                        <li>
+                            <a href="../../index2.php">
                                 <i class="fa fa-dashboard"></i> <span>Dashboard</span>
                             </a>
                         </li>
                         <li>
-                            <a href="pages/widgets.php">
+                            <a href="../widgets.php">
                                 <i class="fa fa-th"></i> <span>Widgets</span> <small class="badge pull-right bg-green">new</small>
                             </a>
                         </li>
-                        <li class="treeview">
+                        <li class="treeview active">
                             <a href="#">
                                 <i class="fa fa-bar-chart-o"></i>
                                 <span>Charts</span>
                                 <i class="fa fa-angle-left pull-right"></i>
                             </a>
                             <ul class="treeview-menu">
-                                <li><a href="pages/charts/morris.php"><i class="fa fa-angle-double-right"></i> Morris</a></li>
-                                <li><a href="pages/charts/flot.php"><i class="fa fa-angle-double-right"></i> Flot</a></li>
-                                <li><a href="pages/charts/inline.php"><i class="fa fa-angle-double-right"></i> Inline charts</a></li>
+                                <li class="active"><a href="morris.php"><i class="fa fa-angle-double-right"></i> Morris</a></li>
+                                <li><a href="flot.php"><i class="fa fa-angle-double-right"></i> Flot</a></li>
+                                <li><a href="inline.php"><i class="fa fa-angle-double-right"></i> Inline charts</a></li>
                             </ul>
                         </li>
                         <li class="treeview">
@@ -325,11 +327,11 @@
                                 <i class="fa fa-angle-left pull-right"></i>
                             </a>
                             <ul class="treeview-menu">
-                                <li><a href="pages/UI/general.php"><i class="fa fa-angle-double-right"></i> General</a></li>
-                                <li><a href="pages/UI/icons.php"><i class="fa fa-angle-double-right"></i> Icons</a></li>
-                                <li><a href="pages/UI/buttons.php"><i class="fa fa-angle-double-right"></i> Buttons</a></li>
-                                <li><a href="pages/UI/sliders.php"><i class="fa fa-angle-double-right"></i> Sliders</a></li>
-                                <li><a href="pages/UI/timeline.php"><i class="fa fa-angle-double-right"></i> Timeline</a></li>
+                                <li><a href="../UI/general.php"><i class="fa fa-angle-double-right"></i> General</a></li>
+                                <li><a href="../UI/icons.php"><i class="fa fa-angle-double-right"></i> Icons</a></li>
+                                <li><a href="../UI/buttons.php"><i class="fa fa-angle-double-right"></i> Buttons</a></li>
+                                <li><a href="../UI/sliders.php"><i class="fa fa-angle-double-right"></i> Sliders</a></li>
+                                <li><a href="../UI/timeline.php"><i class="fa fa-angle-double-right"></i> Timeline</a></li>
                             </ul>
                         </li>
                         <li class="treeview">
@@ -338,9 +340,9 @@
                                 <i class="fa fa-angle-left pull-right"></i>
                             </a>
                             <ul class="treeview-menu">
-                                <li><a href="pages/forms/general.php"><i class="fa fa-angle-double-right"></i> General Elements</a></li>
-                                <li><a href="pages/forms/advanced.php"><i class="fa fa-angle-double-right"></i> Advanced Elements</a></li>
-                                <li><a href="pages/forms/editors.php"><i class="fa fa-angle-double-right"></i> Editors</a></li>
+                                <li><a href="../forms/general.php"><i class="fa fa-angle-double-right"></i> General Elements</a></li>
+                                <li><a href="../forms/advanced.php"><i class="fa fa-angle-double-right"></i> Advanced Elements</a></li>
+                                <li><a href="../forms/editors.php"><i class="fa fa-angle-double-right"></i> Editors</a></li>
                             </ul>
                         </li>
                         <li class="treeview">
@@ -349,18 +351,18 @@
                                 <i class="fa fa-angle-left pull-right"></i>
                             </a>
                             <ul class="treeview-menu">
-                                <li><a href="pages/tables/simple.php"><i class="fa fa-angle-double-right"></i> Simple tables</a></li>
-                                <li><a href="pages/tables/data.php"><i class="fa fa-angle-double-right"></i> Data tables</a></li>
+                                <li><a href="../tables/simple.php"><i class="fa fa-angle-double-right"></i> Simple tables</a></li>
+                                <li><a href="../tables/data.php"><i class="fa fa-angle-double-right"></i> Data tables</a></li>
                             </ul>
                         </li>
                         <li>
-                            <a href="pages/calendar.php">
+                            <a href="../calendar.php">
                                 <i class="fa fa-calendar"></i> <span>Calendar</span>
                                 <small class="badge pull-right bg-red">3</small>
                             </a>
                         </li>
                         <li>
-                            <a href="pages/mailbox.php">
+                            <a href="../mailbox.php">
                                 <i class="fa fa-envelope"></i> <span>Mailbox</span>
                                 <small class="badge pull-right bg-yellow">12</small>
                             </a>
@@ -371,13 +373,13 @@
                                 <i class="fa fa-angle-left pull-right"></i>
                             </a>
                             <ul class="treeview-menu">
-                                <li><a href="pages/examples/invoice.php"><i class="fa fa-angle-double-right"></i> Invoice</a></li>
-                                <li><a href="pages/examples/login.php"><i class="fa fa-angle-double-right"></i> Login</a></li>
-                                <li><a href="pages/examples/register.php"><i class="fa fa-angle-double-right"></i> Register</a></li>
-                                <li><a href="pages/examples/lockscreen.php"><i class="fa fa-angle-double-right"></i> Lockscreen</a></li>
-                                <li><a href="pages/examples/404.php"><i class="fa fa-angle-double-right"></i> 404 Error</a></li>
-                                <li><a href="pages/examples/500.php"><i class="fa fa-angle-double-right"></i> 500 Error</a></li>
-                                <li><a href="pages/examples/blank.php"><i class="fa fa-angle-double-right"></i> Blank Page</a></li>
+                                <li><a href="../examples/invoice.php"><i class="fa fa-angle-double-right"></i> Invoice</a></li>
+                                <li><a href="../examples/login.php"><i class="fa fa-angle-double-right"></i> Login</a></li>
+                                <li><a href="../examples/register.php"><i class="fa fa-angle-double-right"></i> Register</a></li>
+                                <li><a href="../examples/lockscreen.php"><i class="fa fa-angle-double-right"></i> Lockscreen</a></li>
+                                <li><a href="../examples/404.php"><i class="fa fa-angle-double-right"></i> 404 Error</a></li>
+                                <li><a href="../examples/500.php"><i class="fa fa-angle-double-right"></i> 500 Error</a></li>
+                                <li><a href="../examples/blank.php"><i class="fa fa-angle-double-right"></i> Blank Page</a></li>
                             </ul>
                         </li>
                     </ul>
@@ -386,22 +388,69 @@
             </aside>
 
             <!-- Right side column. Contains the navbar and content of the page -->
-            <aside class="right-side">                
+            <aside class="right-side">
                 <!-- Content Header (Page header) -->
                 <section class="content-header">
                     <h1>
-                        Blank page
-                        <small>Control panel</small>
+                        Morris Charts
+                        <small>Preview sample</small>
                     </h1>
                     <ol class="breadcrumb">
                         <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
-                        <li class="active">Blank page</li>
+                        <li><a href="#">Charts</a></li>
+                        <li class="active">Morris</li>
                     </ol>
                 </section>
 
                 <!-- Main content -->
                 <section class="content">
 
+                    <div class="row">
+                        <div class="col-md-6">
+                            <!-- AREA CHART -->
+                            <div class="box box-primary">
+                                <div class="box-header">
+                                    <h3 class="box-title">Area Chart</h3>
+                                </div>
+                                <div class="box-body chart-responsive">
+                                    <div class="chart" id="revenue-chart" style="height: 300px;"></div>
+                                </div><!-- /.box-body -->
+                            </div><!-- /.box -->
+
+                            <!-- DONUT CHART -->
+                            <div class="box box-danger">
+                                <div class="box-header">
+                                    <h3 class="box-title">Donut Chart</h3>
+                                </div>
+                                <div class="box-body chart-responsive">
+                                    <div class="chart" id="sales-chart" style="height: 300px; position: relative;"></div>
+                                </div><!-- /.box-body -->
+                            </div><!-- /.box -->
+
+                        </div><!-- /.col (LEFT) -->
+                        <div class="col-md-6">
+                            <!-- LINE CHART -->
+                            <div class="box box-info">
+                                <div class="box-header">
+                                    <h3 class="box-title">Line Chart</h3>
+                                </div>
+                                <div class="box-body chart-responsive">
+                                    <div class="chart" id="line-chart" style="height: 300px;"></div>
+                                </div><!-- /.box-body -->
+                            </div><!-- /.box -->
+
+                            <!-- BAR CHART -->
+                            <div class="box box-success">
+                                <div class="box-header">
+                                    <h3 class="box-title">Bar Chart</h3>
+                                </div>
+                                <div class="box-body chart-responsive">
+                                    <div class="chart" id="bar-chart" style="height: 300px;"></div>
+                                </div><!-- /.box-body -->
+                            </div><!-- /.box -->
+
+                        </div><!-- /.col (RIGHT) -->
+                    </div><!-- /.row -->
 
                 </section><!-- /.content -->
             </aside><!-- /.right-side -->
@@ -411,9 +460,100 @@
         <!-- jQuery 2.0.2 -->
         <script src="js/jquery.2.0.2.min.js"></script>
         <!-- Bootstrap -->
-        <script src="js/plugins/bootstrap.min.js" type="text/javascript"></script>
+        <script src="../../js/bootstrap.min.js" type="text/javascript"></script>
+
+        <!-- Morris.js charts -->
+        <script src="//cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>
+        <script src="../../js/plugins/morris/morris.min.js" type="text/javascript"></script>
+
         <!-- AdminLTE App -->
-        <script src="js/plugins/AdminLTE/app.js" type="text/javascript"></script>
+        <script src="../../js/AdminLTE/app.js" type="text/javascript"></script>
+        <!-- AdminLTE for demo purposes -->
+        <script src="../../js/AdminLTE/demo.js" type="text/javascript"></script>
+        <!-- page script -->
+        <script type="text/javascript">
+            $(function() {
+                "use strict";
+
+                // AREA CHART
+                var area = new Morris.Area({
+                    element: 'revenue-chart',
+                    resize: true,
+                    data: [
+                        {y: '2011 Q1', item1: 2666, item2: 2666},
+                        {y: '2011 Q2', item1: 2778, item2: 2294},
+                        {y: '2011 Q3', item1: 4912, item2: 1969},
+                        {y: '2011 Q4', item1: 3767, item2: 3597},
+                        {y: '2012 Q1', item1: 6810, item2: 1914},
+                        {y: '2012 Q2', item1: 5670, item2: 4293},
+                        {y: '2012 Q3', item1: 4820, item2: 3795},
+                        {y: '2012 Q4', item1: 15073, item2: 5967},
+                        {y: '2013 Q1', item1: 10687, item2: 4460},
+                        {y: '2013 Q2', item1: 8432, item2: 5713}
+                    ],
+                    xkey: 'y',
+                    ykeys: ['item1', 'item2'],
+                    labels: ['Item 1', 'Item 2'],
+                    lineColors: ['#a0d0e0', '#3c8dbc'],
+                    hideHover: 'auto'
+                });
+
+                // LINE CHART
+                var line = new Morris.Line({
+                    element: 'line-chart',
+                    resize: true,
+                    data: [
+                        {y: '2011 Q1', item1: 2666},
+                        {y: '2011 Q2', item1: 2778},
+                        {y: '2011 Q3', item1: 4912},
+                        {y: '2011 Q4', item1: 3767},
+                        {y: '2012 Q1', item1: 6810},
+                        {y: '2012 Q2', item1: 5670},
+                        {y: '2012 Q3', item1: 4820},
+                        {y: '2012 Q4', item1: 15073},
+                        {y: '2013 Q1', item1: 10687},
+                        {y: '2013 Q2', item1: 8432}
+                    ],
+                    xkey: 'y',
+                    ykeys: ['item1'],
+                    labels: ['Item 1'],
+                    lineColors: ['#3c8dbc'],
+                    hideHover: 'auto'
+                });
+
+                //DONUT CHART
+                var donut = new Morris.Donut({
+                    element: 'sales-chart',
+                    resize: true,
+                    colors: ["#3c8dbc", "#f56954", "#00a65a"],
+                    data: [
+                        {label: "Download Sales", value: 12},
+                        {label: "In-Store Sales", value: 30},
+                        {label: "Mail-Order Sales", value: 20}
+                    ],
+                    hideHover: 'auto'
+                });
+                //BAR CHART
+                var bar = new Morris.Bar({
+                    element: 'bar-chart',
+                    resize: true,
+                    data: [
+                        {y: '2006', a: 100, b: 90},
+                        {y: '2007', a: 75, b: 65},
+                        {y: '2008', a: 50, b: 40},
+                        {y: '2009', a: 75, b: 65},
+                        {y: '2010', a: 50, b: 40},
+                        {y: '2011', a: 75, b: 65},
+                        {y: '2012', a: 100, b: 90}
+                    ],
+                    barColors: ['#00a65a', '#f56954'],
+                    xkey: 'y',
+                    ykeys: ['a', 'b'],
+                    labels: ['CPU', 'DISK'],
+                    hideHover: 'auto'
+                });
+            });
+        </script>
 
     </body>
 </html>

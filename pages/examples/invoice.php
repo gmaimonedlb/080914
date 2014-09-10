@@ -2,16 +2,16 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>AdminLTE | Dashboard</title>
+        <title>AdminLTE | Invoice</title>
         <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
         <!-- bootstrap 3.0.2 -->
-        <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+        <link href="../../css/bootstrap.min.css" rel="stylesheet" type="text/css" />
         <!-- font Awesome -->
-        <link href="css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+        <link href="../../css/font-awesome.min.css" rel="stylesheet" type="text/css" />
         <!-- Ionicons -->
-        <link href="css/ionicons.min.css" rel="stylesheet" type="text/css" />
+        <link href="../../css/ionicons.min.css" rel="stylesheet" type="text/css" />
         <!-- Theme style -->
-        <link href="css/AdminLTE.css" rel="stylesheet" type="text/css" />
+        <link href="../../css/AdminLTE.css" rel="stylesheet" type="text/css" />
 
         <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
         <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -23,8 +23,8 @@
     <body class="skin-blue">
         <!-- header logo: style can be found in header.less -->
         <header class="header">
-            <a href="index2.php" class="logo">
-                <!-- Add the class icon to your logo image or logo icon to add the margining -->
+            <a href="index.html" class="logo">
+                <!-- Add the class .icon to your logo image or logo icon to add some margining -->
                 AdminLTE
             </a>
             <!-- Header Navbar: style can be found in header.less -->
@@ -52,7 +52,7 @@
                                         <li><!-- start message -->
                                             <a href="#">
                                                 <div class="pull-left">
-                                                    <img src="img/avatar3.png" class="img-circle" alt="User Image"/>
+                                                    <img src="../../img/avatar3.png" class="img-circle" alt="User Image"/>
                                                 </div>
                                                 <h4>
                                                     Support Team
@@ -64,7 +64,7 @@
                                         <li>
                                             <a href="#">
                                                 <div class="pull-left">
-                                                    <img src="img/avatar2.png" class="img-circle" alt="user image"/>
+                                                    <img src="../../img/avatar2.png" class="img-circle" alt="user image"/>
                                                 </div>
                                                 <h4>
                                                     AdminLTE Design Team
@@ -76,7 +76,7 @@
                                         <li>
                                             <a href="#">
                                                 <div class="pull-left">
-                                                    <img src="img/avatar.png" class="img-circle" alt="user image"/>
+                                                    <img src="../../img/avatar.png" class="img-circle" alt="user image"/>
                                                 </div>
                                                 <h4>
                                                     Developers
@@ -88,7 +88,7 @@
                                         <li>
                                             <a href="#">
                                                 <div class="pull-left">
-                                                    <img src="img/avatar2.png" class="img-circle" alt="user image"/>
+                                                    <img src="../../img/avatar2.png" class="img-circle" alt="user image"/>
                                                 </div>
                                                 <h4>
                                                     Sales Department
@@ -100,7 +100,7 @@
                                         <li>
                                             <a href="#">
                                                 <div class="pull-left">
-                                                    <img src="img/avatar.png" class="img-circle" alt="user image"/>
+                                                    <img src="../../img/avatar.png" class="img-circle" alt="user image"/>
                                                 </div>
                                                 <h4>
                                                     Reviewers
@@ -235,7 +235,7 @@
                             <ul class="dropdown-menu">
                                 <!-- User image -->
                                 <li class="user-header bg-light-blue">
-                                    <img src="img/avatar3.png" class="img-circle" alt="User Image" />
+                                    <img src="../../img/avatar3.png" class="img-circle" alt="User Image" />
                                     <p>
                                         Jane Doe - Web Developer
                                         <small>Member since Nov. 2012</small>
@@ -270,13 +270,13 @@
         </header>
         <div class="wrapper row-offcanvas row-offcanvas-left">
             <!-- Left side column. contains the logo and sidebar -->
-            <aside class="left-side sidebar-offcanvas">                
+            <aside class="left-side sidebar-offcanvas">
                 <!-- sidebar: style can be found in sidebar.less -->
                 <section class="sidebar">
                     <!-- Sidebar user panel -->
                     <div class="user-panel">
                         <div class="pull-left image">
-                            <img src="img/avatar3.png" class="img-circle" alt="User Image" />
+                            <img src="../../img/avatar3.png" class="img-circle" alt="User Image" />
                         </div>
                         <div class="pull-left info">
                             <p>Hello, Jane</p>
@@ -296,13 +296,13 @@
                     <!-- /.search form -->
                     <!-- sidebar menu: : style can be found in sidebar.less -->
                     <ul class="sidebar-menu">
-                        <li class="active">
-                            <a href="index2.php">
+                        <li>
+                            <a href="../../index2.php">
                                 <i class="fa fa-dashboard"></i> <span>Dashboard</span>
                             </a>
                         </li>
                         <li>
-                            <a href="pages/widgets.php">
+                            <a href="../widgets.php">
                                 <i class="fa fa-th"></i> <span>Widgets</span> <small class="badge pull-right bg-green">new</small>
                             </a>
                         </li>
@@ -313,9 +313,9 @@
                                 <i class="fa fa-angle-left pull-right"></i>
                             </a>
                             <ul class="treeview-menu">
-                                <li><a href="pages/charts/morris.php"><i class="fa fa-angle-double-right"></i> Morris</a></li>
-                                <li><a href="pages/charts/flot.php"><i class="fa fa-angle-double-right"></i> Flot</a></li>
-                                <li><a href="pages/charts/inline.php"><i class="fa fa-angle-double-right"></i> Inline charts</a></li>
+                                <li><a href="../charts/morris.php"><i class="fa fa-angle-double-right"></i> Morris</a></li>
+                                <li><a href="../charts/flot.php"><i class="fa fa-angle-double-right"></i> Flot</a></li>
+                                <li><a href="../charts/inline.php"><i class="fa fa-angle-double-right"></i> Inline charts</a></li>
                             </ul>
                         </li>
                         <li class="treeview">
@@ -325,11 +325,11 @@
                                 <i class="fa fa-angle-left pull-right"></i>
                             </a>
                             <ul class="treeview-menu">
-                                <li><a href="pages/UI/general.php"><i class="fa fa-angle-double-right"></i> General</a></li>
-                                <li><a href="pages/UI/icons.php"><i class="fa fa-angle-double-right"></i> Icons</a></li>
-                                <li><a href="pages/UI/buttons.php"><i class="fa fa-angle-double-right"></i> Buttons</a></li>
-                                <li><a href="pages/UI/sliders.php"><i class="fa fa-angle-double-right"></i> Sliders</a></li>
-                                <li><a href="pages/UI/timeline.php"><i class="fa fa-angle-double-right"></i> Timeline</a></li>
+                                <li><a href="../UI/general.php"><i class="fa fa-angle-double-right"></i> General</a></li>
+                                <li><a href="../UI/icons.php"><i class="fa fa-angle-double-right"></i> Icons</a></li>
+                                <li><a href="../UI/buttons.php"><i class="fa fa-angle-double-right"></i> Buttons</a></li>
+                                <li><a href="../UI/sliders.php"><i class="fa fa-angle-double-right"></i> Sliders</a></li>
+                                <li><a href="../UI/timeline.php"><i class="fa fa-angle-double-right"></i> Timeline</a></li>
                             </ul>
                         </li>
                         <li class="treeview">
@@ -338,9 +338,9 @@
                                 <i class="fa fa-angle-left pull-right"></i>
                             </a>
                             <ul class="treeview-menu">
-                                <li><a href="pages/forms/general.php"><i class="fa fa-angle-double-right"></i> General Elements</a></li>
-                                <li><a href="pages/forms/advanced.php"><i class="fa fa-angle-double-right"></i> Advanced Elements</a></li>
-                                <li><a href="pages/forms/editors.php"><i class="fa fa-angle-double-right"></i> Editors</a></li>
+                                <li><a href="../forms/general.php"><i class="fa fa-angle-double-right"></i> General Elements</a></li>
+                                <li><a href="../forms/advanced.php"><i class="fa fa-angle-double-right"></i> Advanced Elements</a></li>
+                                <li><a href="../forms/editors.php"><i class="fa fa-angle-double-right"></i> Editors</a></li>
                             </ul>
                         </li>
                         <li class="treeview">
@@ -349,35 +349,35 @@
                                 <i class="fa fa-angle-left pull-right"></i>
                             </a>
                             <ul class="treeview-menu">
-                                <li><a href="pages/tables/simple.php"><i class="fa fa-angle-double-right"></i> Simple tables</a></li>
-                                <li><a href="pages/tables/data.php"><i class="fa fa-angle-double-right"></i> Data tables</a></li>
+                                <li><a href="../tables/simple.php"><i class="fa fa-angle-double-right"></i> Simple tables</a></li>
+                                <li><a href="../tables/data.php"><i class="fa fa-angle-double-right"></i> Data tables</a></li>
                             </ul>
                         </li>
                         <li>
-                            <a href="pages/calendar.php">
+                            <a href="../calendar.php">
                                 <i class="fa fa-calendar"></i> <span>Calendar</span>
                                 <small class="badge pull-right bg-red">3</small>
                             </a>
                         </li>
                         <li>
-                            <a href="pages/mailbox.php">
+                            <a href="../mailbox.php">
                                 <i class="fa fa-envelope"></i> <span>Mailbox</span>
                                 <small class="badge pull-right bg-yellow">12</small>
                             </a>
                         </li>
-                        <li class="treeview">
+                        <li class="treeview active">
                             <a href="#">
                                 <i class="fa fa-folder"></i> <span>Examples</span>
                                 <i class="fa fa-angle-left pull-right"></i>
                             </a>
                             <ul class="treeview-menu">
-                                <li><a href="pages/examples/invoice.php"><i class="fa fa-angle-double-right"></i> Invoice</a></li>
-                                <li><a href="pages/examples/login.php"><i class="fa fa-angle-double-right"></i> Login</a></li>
-                                <li><a href="pages/examples/register.php"><i class="fa fa-angle-double-right"></i> Register</a></li>
-                                <li><a href="pages/examples/lockscreen.php"><i class="fa fa-angle-double-right"></i> Lockscreen</a></li>
-                                <li><a href="pages/examples/404.php"><i class="fa fa-angle-double-right"></i> 404 Error</a></li>
-                                <li><a href="pages/examples/500.php"><i class="fa fa-angle-double-right"></i> 500 Error</a></li>
-                                <li><a href="pages/examples/blank.php"><i class="fa fa-angle-double-right"></i> Blank Page</a></li>
+                                <li class="active"><a href="invoice.php"><i class="fa fa-angle-double-right"></i> Invoice</a></li>
+                                <li><a href="login.php"><i class="fa fa-angle-double-right"></i> Login</a></li>
+                                <li><a href="register.php"><i class="fa fa-angle-double-right"></i> Register</a></li>
+                                <li><a href="lockscreen.php"><i class="fa fa-angle-double-right"></i> Lockscreen</a></li>
+                                <li><a href="404.php"><i class="fa fa-angle-double-right"></i> 404 Error</a></li>
+                                <li><a href="500.php"><i class="fa fa-angle-double-right"></i> 500 Error</a></li>
+                                <li><a href="blank.php"><i class="fa fa-angle-double-right"></i> Blank Page</a></li>
                             </ul>
                         </li>
                     </ul>
@@ -386,23 +386,161 @@
             </aside>
 
             <!-- Right side column. Contains the navbar and content of the page -->
-            <aside class="right-side">                
+            <aside class="right-side">
                 <!-- Content Header (Page header) -->
                 <section class="content-header">
                     <h1>
-                        Blank page
-                        <small>Control panel</small>
+                        Invoice
+                        <small>#007612</small>
                     </h1>
                     <ol class="breadcrumb">
                         <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
+                        <li><a href="#">Examples</a></li>
                         <li class="active">Blank page</li>
                     </ol>
                 </section>
 
+                <div class="pad margin no-print">
+                    <div class="alert alert-info" style="margin-bottom: 0!important;">
+                        <i class="fa fa-info"></i>
+                        <b>Note:</b> This page has been enhanced for printing. Click the print button at the bottom of the invoice to test.
+                    </div>
+                </div>
+
                 <!-- Main content -->
-                <section class="content">
+                <section class="content invoice">
+                    <!-- title row -->
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <h2 class="page-header">
+                                <i class="fa fa-globe"></i> AdminLTE, Inc.
+                                <small class="pull-right">Date: 2/10/2014</small>
+                            </h2>
+                        </div><!-- /.col -->
+                    </div>
+                    <!-- info row -->
+                    <div class="row invoice-info">
+                        <div class="col-sm-4 invoice-col">
+                            From
+                            <address>
+                                <strong>Admin, Inc.</strong><br>
+                                795 Folsom Ave, Suite 600<br>
+                                San Francisco, CA 94107<br>
+                                Phone: (804) 123-5432<br/>
+                                Email: info@almasaeedstudio.com
+                            </address>
+                        </div><!-- /.col -->
+                        <div class="col-sm-4 invoice-col">
+                            To
+                            <address>
+                                <strong>John Doe</strong><br>
+                                795 Folsom Ave, Suite 600<br>
+                                San Francisco, CA 94107<br>
+                                Phone: (555) 539-1037<br/>
+                                Email: john.doe@example.com
+                            </address>
+                        </div><!-- /.col -->
+                        <div class="col-sm-4 invoice-col">
+                            <b>Invoice #007612</b><br/>
+                            <br/>
+                            <b>Order ID:</b> 4F3S8J<br/>
+                            <b>Payment Due:</b> 2/22/2014<br/>
+                            <b>Account:</b> 968-34567
+                        </div><!-- /.col -->
+                    </div><!-- /.row -->
 
+                    <!-- Table row -->
+                    <div class="row">
+                        <div class="col-xs-12 table-responsive">
+                            <table class="table table-striped">
+                                <thead>
+                                    <tr>
+                                        <th>Qty</th>
+                                        <th>Product</th>
+                                        <th>Serial #</th>
+                                        <th>Description</th>
+                                        <th>Subtotal</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>Call of Duty</td>
+                                        <td>455-981-221</td>
+                                        <td>El snort testosterone trophy driving gloves handsome</td>
+                                        <td>$64.50</td>
+                                    </tr>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>Need for Speed IV</td>
+                                        <td>247-925-726</td>
+                                        <td>Wes Anderson umami biodiesel</td>
+                                        <td>$50.00</td>
+                                    </tr>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>Monsters DVD</td>
+                                        <td>735-845-642</td>
+                                        <td>Terry Richardson helvetica tousled street art master</td>
+                                        <td>$10.70</td>
+                                    </tr>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>Grown Ups Blue Ray</td>
+                                        <td>422-568-642</td>
+                                        <td>Tousled lomo letterpress</td>
+                                        <td>$25.99</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div><!-- /.col -->
+                    </div><!-- /.row -->
 
+                    <div class="row">
+                        <!-- accepted payments column -->
+                        <div class="col-xs-6">
+                            <p class="lead">Payment Methods:</p>
+                            <img src="../../img/credit/visa.png" alt="Visa"/>
+                            <img src="../../img/credit/mastercard.png" alt="Mastercard"/>
+                            <img src="../../img/credit/american-express.png" alt="American Express"/>
+                            <img src="../../img/credit/paypal2.png" alt="Paypal"/>
+                            <p class="text-muted well well-sm no-shadow" style="margin-top: 10px;">
+                                Etsy doostang zoodles disqus groupon greplin oooj voxy zoodles, weebly ning heekya handango imeem plugg dopplr jibjab, movity jajah plickers sifteo edmodo ifttt zimbra.
+                            </p>
+                        </div><!-- /.col -->
+                        <div class="col-xs-6">
+                            <p class="lead">Amount Due 2/22/2014</p>
+                            <div class="table-responsive">
+                                <table class="table">
+                                    <tr>
+                                        <th style="width:50%">Subtotal:</th>
+                                        <td>$250.30</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Tax (9.3%)</th>
+                                        <td>$10.34</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Shipping:</th>
+                                        <td>$5.80</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Total:</th>
+                                        <td>$265.24</td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div><!-- /.col -->
+                    </div><!-- /.row -->
+
+                    <!-- this row will not appear when printing -->
+                    <div class="row no-print">
+                        <div class="col-xs-12">
+                            <button class="btn btn-default" onclick="window.print();"><i class="fa fa-print"></i> Print</button>
+                            <button class="btn btn-success pull-right"><i class="fa fa-credit-card"></i> Submit Payment</button>
+                            <button class="btn btn-primary pull-right" style="margin-right: 5px;"><i class="fa fa-download"></i> Generate PDF</button>
+                        </div>
+                    </div>
                 </section><!-- /.content -->
             </aside><!-- /.right-side -->
         </div><!-- ./wrapper -->
@@ -411,9 +549,10 @@
         <!-- jQuery 2.0.2 -->
         <script src="js/jquery.2.0.2.min.js"></script>
         <!-- Bootstrap -->
-        <script src="js/plugins/bootstrap.min.js" type="text/javascript"></script>
+        <script src="../../js/bootstrap.min.js" type="text/javascript"></script>
         <!-- AdminLTE App -->
-        <script src="js/plugins/AdminLTE/app.js" type="text/javascript"></script>
-
+        <script src="../../js/AdminLTE/app.js" type="text/javascript"></script>
+        <!-- AdminLTE for demo purposes -->
+        <script src="../../js/AdminLTE/demo.js" type="text/javascript"></script>
     </body>
 </html>

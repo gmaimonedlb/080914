@@ -23,7 +23,7 @@ $(function() {
         "width": "200px",
         "z-index": "999999"
     }).addClass("no-print");
-    demo_settings.append(
+/*    demo_settings.append(
             "<h4 style='margin: 0 0 5px 0; border-bottom: 1px dashed #ddd; padding-bottom: 3px;'>Layout Options</h4>"
             + "<div class='form-group no-margin'>"
             + "<div class='.checkbox'>"
@@ -34,6 +34,7 @@ $(function() {
             + "</div>"
             + "</div>"
             );
+*/
     demo_settings.append(
             "<h4 style='margin: 0 0 5px 0; border-bottom: 1px dashed #ddd; padding-bottom: 3px;'>Skins</h4>"
             + "<div class='form-group no-margin'>"

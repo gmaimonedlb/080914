@@ -2,16 +2,22 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>AdminLTE | Dashboard</title>
+        <title>AdminLTE | UI Sliders</title>
         <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
         <!-- bootstrap 3.0.2 -->
-        <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+        <link href="../../css/bootstrap.min.css" rel="stylesheet" type="text/css" />
         <!-- font Awesome -->
-        <link href="css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+        <link href="../../css/font-awesome.min.css" rel="stylesheet" type="text/css" />
         <!-- Ionicons -->
-        <link href="css/ionicons.min.css" rel="stylesheet" type="text/css" />
+        <link href="../../css/ionicons.min.css" rel="stylesheet" type="text/css" />
+        <!-- Ion Slider -->
+        <link href="../../css/ionslider/ion.rangeSlider.css" rel="stylesheet" type="text/css" />
+        <!-- ion slider Nice -->
+        <link href="../../css/ionslider/ion.rangeSlider.skinNice.css" rel="stylesheet" type="text/css" />
+        <!-- bootstrap slider -->
+        <link href="../../css/bootstrap-slider/slider.css" rel="stylesheet" type="text/css" />
         <!-- Theme style -->
-        <link href="css/AdminLTE.css" rel="stylesheet" type="text/css" />
+        <link href="../../css/AdminLTE.css" rel="stylesheet" type="text/css" />
 
         <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
         <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -23,7 +29,7 @@
     <body class="skin-blue">
         <!-- header logo: style can be found in header.less -->
         <header class="header">
-            <a href="index2.php" class="logo">
+            <a href="../../index2.php" class="logo">
                 <!-- Add the class icon to your logo image or logo icon to add the margining -->
                 AdminLTE
             </a>
@@ -52,7 +58,7 @@
                                         <li><!-- start message -->
                                             <a href="#">
                                                 <div class="pull-left">
-                                                    <img src="img/avatar3.png" class="img-circle" alt="User Image"/>
+                                                    <img src="../../img/avatar3.png" class="img-circle" alt="User Image"/>
                                                 </div>
                                                 <h4>
                                                     Support Team
@@ -64,7 +70,7 @@
                                         <li>
                                             <a href="#">
                                                 <div class="pull-left">
-                                                    <img src="img/avatar2.png" class="img-circle" alt="user image"/>
+                                                    <img src="../../img/avatar2.png" class="img-circle" alt="user image"/>
                                                 </div>
                                                 <h4>
                                                     AdminLTE Design Team
@@ -76,7 +82,7 @@
                                         <li>
                                             <a href="#">
                                                 <div class="pull-left">
-                                                    <img src="img/avatar.png" class="img-circle" alt="user image"/>
+                                                    <img src="../../img/avatar.png" class="img-circle" alt="user image"/>
                                                 </div>
                                                 <h4>
                                                     Developers
@@ -88,7 +94,7 @@
                                         <li>
                                             <a href="#">
                                                 <div class="pull-left">
-                                                    <img src="img/avatar2.png" class="img-circle" alt="user image"/>
+                                                    <img src="../../img/avatar2.png" class="img-circle" alt="user image"/>
                                                 </div>
                                                 <h4>
                                                     Sales Department
@@ -100,7 +106,7 @@
                                         <li>
                                             <a href="#">
                                                 <div class="pull-left">
-                                                    <img src="img/avatar.png" class="img-circle" alt="user image"/>
+                                                    <img src="../../img/avatar.png" class="img-circle" alt="user image"/>
                                                 </div>
                                                 <h4>
                                                     Reviewers
@@ -235,7 +241,7 @@
                             <ul class="dropdown-menu">
                                 <!-- User image -->
                                 <li class="user-header bg-light-blue">
-                                    <img src="img/avatar3.png" class="img-circle" alt="User Image" />
+                                    <img src="../../img/avatar3.png" class="img-circle" alt="User Image" />
                                     <p>
                                         Jane Doe - Web Developer
                                         <small>Member since Nov. 2012</small>
@@ -270,13 +276,13 @@
         </header>
         <div class="wrapper row-offcanvas row-offcanvas-left">
             <!-- Left side column. contains the logo and sidebar -->
-            <aside class="left-side sidebar-offcanvas">                
+            <aside class="left-side sidebar-offcanvas">
                 <!-- sidebar: style can be found in sidebar.less -->
                 <section class="sidebar">
                     <!-- Sidebar user panel -->
                     <div class="user-panel">
                         <div class="pull-left image">
-                            <img src="img/avatar3.png" class="img-circle" alt="User Image" />
+                            <img src="../../img/avatar3.png" class="img-circle" alt="User Image" />
                         </div>
                         <div class="pull-left info">
                             <p>Hello, Jane</p>
@@ -296,13 +302,13 @@
                     <!-- /.search form -->
                     <!-- sidebar menu: : style can be found in sidebar.less -->
                     <ul class="sidebar-menu">
-                        <li class="active">
-                            <a href="index2.php">
+                        <li>
+                            <a href="../../index2.php">
                                 <i class="fa fa-dashboard"></i> <span>Dashboard</span>
                             </a>
                         </li>
                         <li>
-                            <a href="pages/widgets.php">
+                            <a href="../widgets.php">
                                 <i class="fa fa-th"></i> <span>Widgets</span> <small class="badge pull-right bg-green">new</small>
                             </a>
                         </li>
@@ -313,23 +319,23 @@
                                 <i class="fa fa-angle-left pull-right"></i>
                             </a>
                             <ul class="treeview-menu">
-                                <li><a href="pages/charts/morris.php"><i class="fa fa-angle-double-right"></i> Morris</a></li>
-                                <li><a href="pages/charts/flot.php"><i class="fa fa-angle-double-right"></i> Flot</a></li>
-                                <li><a href="pages/charts/inline.php"><i class="fa fa-angle-double-right"></i> Inline charts</a></li>
+                                <li><a href="../charts/morris.php"><i class="fa fa-angle-double-right"></i> Morris</a></li>
+                                <li><a href="../charts/flot.php"><i class="fa fa-angle-double-right"></i> Flot</a></li>
+                                <li><a href="../charts/inline.php"><i class="fa fa-angle-double-right"></i> Inline charts</a></li>
                             </ul>
                         </li>
-                        <li class="treeview">
+                        <li class="treeview active">
                             <a href="#">
                                 <i class="fa fa-laptop"></i>
                                 <span>UI Elements</span>
                                 <i class="fa fa-angle-left pull-right"></i>
                             </a>
                             <ul class="treeview-menu">
-                                <li><a href="pages/UI/general.php"><i class="fa fa-angle-double-right"></i> General</a></li>
-                                <li><a href="pages/UI/icons.php"><i class="fa fa-angle-double-right"></i> Icons</a></li>
-                                <li><a href="pages/UI/buttons.php"><i class="fa fa-angle-double-right"></i> Buttons</a></li>
-                                <li><a href="pages/UI/sliders.php"><i class="fa fa-angle-double-right"></i> Sliders</a></li>
-                                <li><a href="pages/UI/timeline.php"><i class="fa fa-angle-double-right"></i> Timeline</a></li>
+                                <li><a href="general.php"><i class="fa fa-angle-double-right"></i> General</a></li>
+                                <li><a href="icons.php"><i class="fa fa-angle-double-right"></i> Icons</a></li>
+                                <li><a href="buttons.php"><i class="fa fa-angle-double-right"></i> Buttons</a></li>
+                                <li class="active"><a href="sliders.php"><i class="fa fa-angle-double-right"></i> Sliders</a></li>
+                                <li><a href="timeline.php"><i class="fa fa-angle-double-right"></i> Timeline</a></li>
                             </ul>
                         </li>
                         <li class="treeview">
@@ -338,9 +344,9 @@
                                 <i class="fa fa-angle-left pull-right"></i>
                             </a>
                             <ul class="treeview-menu">
-                                <li><a href="pages/forms/general.php"><i class="fa fa-angle-double-right"></i> General Elements</a></li>
-                                <li><a href="pages/forms/advanced.php"><i class="fa fa-angle-double-right"></i> Advanced Elements</a></li>
-                                <li><a href="pages/forms/editors.php"><i class="fa fa-angle-double-right"></i> Editors</a></li>
+                                <li><a href="../forms/general.php"><i class="fa fa-angle-double-right"></i> General Elements</a></li>
+                                <li><a href="../forms/advanced.php"><i class="fa fa-angle-double-right"></i> Advanced Elements</a></li>
+                                <li><a href="../forms/editors.php"><i class="fa fa-angle-double-right"></i> Editors</a></li>
                             </ul>
                         </li>
                         <li class="treeview">
@@ -349,18 +355,18 @@
                                 <i class="fa fa-angle-left pull-right"></i>
                             </a>
                             <ul class="treeview-menu">
-                                <li><a href="pages/tables/simple.php"><i class="fa fa-angle-double-right"></i> Simple tables</a></li>
-                                <li><a href="pages/tables/data.php"><i class="fa fa-angle-double-right"></i> Data tables</a></li>
+                                <li><a href="../tables/simple.php"><i class="fa fa-angle-double-right"></i> Simple tables</a></li>
+                                <li><a href="../tables/data.php"><i class="fa fa-angle-double-right"></i> Data tables</a></li>
                             </ul>
                         </li>
                         <li>
-                            <a href="pages/calendar.php">
+                            <a href="../calendar.php">
                                 <i class="fa fa-calendar"></i> <span>Calendar</span>
                                 <small class="badge pull-right bg-red">3</small>
                             </a>
                         </li>
                         <li>
-                            <a href="pages/mailbox.php">
+                            <a href="../mailbox.php">
                                 <i class="fa fa-envelope"></i> <span>Mailbox</span>
                                 <small class="badge pull-right bg-yellow">12</small>
                             </a>
@@ -371,13 +377,13 @@
                                 <i class="fa fa-angle-left pull-right"></i>
                             </a>
                             <ul class="treeview-menu">
-                                <li><a href="pages/examples/invoice.php"><i class="fa fa-angle-double-right"></i> Invoice</a></li>
-                                <li><a href="pages/examples/login.php"><i class="fa fa-angle-double-right"></i> Login</a></li>
-                                <li><a href="pages/examples/register.php"><i class="fa fa-angle-double-right"></i> Register</a></li>
-                                <li><a href="pages/examples/lockscreen.php"><i class="fa fa-angle-double-right"></i> Lockscreen</a></li>
-                                <li><a href="pages/examples/404.php"><i class="fa fa-angle-double-right"></i> 404 Error</a></li>
-                                <li><a href="pages/examples/500.php"><i class="fa fa-angle-double-right"></i> 500 Error</a></li>
-                                <li><a href="pages/examples/blank.php"><i class="fa fa-angle-double-right"></i> Blank Page</a></li>
+                                <li><a href="../examples/invoice.php"><i class="fa fa-angle-double-right"></i> Invoice</a></li>
+                                <li><a href="../examples/login.php"><i class="fa fa-angle-double-right"></i> Login</a></li>
+                                <li><a href="../examples/register.php"><i class="fa fa-angle-double-right"></i> Register</a></li>
+                                <li><a href="../examples/lockscreen.php"><i class="fa fa-angle-double-right"></i> Lockscreen</a></li>
+                                <li><a href="../examples/404.php"><i class="fa fa-angle-double-right"></i> 404 Error</a></li>
+                                <li><a href="../examples/500.php"><i class="fa fa-angle-double-right"></i> 500 Error</a></li>
+                                <li><a href="../examples/blank.php"><i class="fa fa-angle-double-right"></i> Blank Page</a></li>
                             </ul>
                         </li>
                     </ul>
@@ -386,23 +392,91 @@
             </aside>
 
             <!-- Right side column. Contains the navbar and content of the page -->
-            <aside class="right-side">                
+            <aside class="right-side">
                 <!-- Content Header (Page header) -->
                 <section class="content-header">
                     <h1>
-                        Blank page
-                        <small>Control panel</small>
+                        Sliders
+                        <small>range sliders</small>
                     </h1>
                     <ol class="breadcrumb">
                         <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
-                        <li class="active">Blank page</li>
+                        <li><a href="#">UI</a></li>
+                        <li class="active">Sliders</li>
                     </ol>
                 </section>
 
                 <!-- Main content -->
                 <section class="content">
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <div class="box box-primary">
+                                <div class="box-header">
+                                    <h3 class="box-title">Ion Slider</h3>
+                                </div><!-- /.box-header -->
+                                <div class="box-body">
+                                    <div class="row margin">
+                                        <div class="col-sm-6">
+                                            <input id="range_1" type="text" name="range_1" value="" />
+                                        </div>
 
+                                        <div class="col-sm-6">
+                                            <input id="range_2" type="text" name="range_2" value="1000;100000" data-type="double" data-step="500" data-postfix=" &euro;" data-from="30000" data-to="90000" data-hasgrid="true" />
+                                        </div>
+                                    </div>
+                                    <div class="row margin">
+                                        <div class="col-sm-6">
+                                            <input id="range_5" type="text" name="range_5" value="" />
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <input id="range_6" type="text" name="range_6" value="" />
+                                        </div>
+                                    </div>
+                                    <div class="row margin">
+                                        <div class="col-sm-12">
+                                            <input id="range_4" type="text" name="range_4" value="10000;100000" />
+                                        </div>
+                                    </div>
+                                </div><!-- /.box-body -->
+                            </div><!-- /.box -->
+                        </div><!-- /.col -->
+                    </div><!-- /.row -->
 
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <div class="box box-primary">
+                                <div class="box-header">
+                                    <h3 class="box-title">Bootstrap Slider</h3>
+                                </div><!-- /.box-header -->
+                                <div class="box-body">
+                                    <div class="row margin">
+                                        <div class="col-sm-6">
+                                            <input type="text" value="" class="slider form-control" data-slider-min="-200" data-slider-max="200" data-slider-step="5" data-slider-value="[-100,100]" data-slider-orientation="horizontal" data-slider-selection="before" data-slider-tooltip="show" data-slider-id="red">
+                                            <p>data-slider-id="red"</p>
+                                            <input type="text" value="" class="slider form-control" data-slider-min="-200" data-slider-max="200" data-slider-step="5" data-slider-value="[-100,100]" data-slider-orientation="horizontal" data-slider-selection="before" data-slider-tooltip="show" data-slider-id="blue">
+                                            <p>data-slider-id="blue"</p>
+                                            <input type="text" value="" class="slider form-control" data-slider-min="-200" data-slider-max="200" data-slider-step="5" data-slider-value="[-100,100]" data-slider-orientation="horizontal" data-slider-selection="before" data-slider-tooltip="show" data-slider-id="green">
+                                            <p>data-slider-id="green"</p>
+                                            <input type="text" value="" class="slider form-control" data-slider-min="-200" data-slider-max="200" data-slider-step="5" data-slider-value="[-100,100]" data-slider-orientation="horizontal" data-slider-selection="before" data-slider-tooltip="show" data-slider-id="yellow">
+                                            <p>data-slider-id="yellow"</p>
+                                            <input type="text" value="" class="slider form-control" data-slider-min="-200" data-slider-max="200" data-slider-step="5" data-slider-value="[-100,100]" data-slider-orientation="horizontal" data-slider-selection="before" data-slider-tooltip="show" data-slider-id="aqua">
+                                            <p>data-slider-id="aqua"</p>
+                                            <input type="text" value="" class="slider form-control" data-slider-min="-200" data-slider-max="200" data-slider-step="5" data-slider-value="[-100,100]" data-slider-orientation="horizontal" data-slider-selection="before" data-slider-tooltip="show" data-slider-id="purple">
+                                            <p style="margin-top: 10px">data-slider-id="purple"</p>
+                                        </div>
+                                        <div class="col-sm-6 text-center">
+                                            <input type="text" value="" class="slider form-control" data-slider-min="-200" data-slider-max="200" data-slider-step="5" data-slider-value="[-100,100]" data-slider-orientation="vertical" data-slider-selection="before" data-slider-tooltip="show" data-slider-id="red">
+                                            <input type="text" value="" class="slider form-control" data-slider-min="-200" data-slider-max="200" data-slider-step="5" data-slider-value="[-100,100]" data-slider-orientation="vertical" data-slider-selection="before" data-slider-tooltip="show" data-slider-id="blue">
+                                            <input type="text" value="" class="slider form-control" data-slider-min="-200" data-slider-max="200" data-slider-step="5" data-slider-value="[-100,100]" data-slider-orientation="vertical" data-slider-selection="before" data-slider-tooltip="show" data-slider-id="green">
+                                            <input type="text" value="" class="slider form-control" data-slider-min="-200" data-slider-max="200" data-slider-step="5" data-slider-value="[-100,100]" data-slider-orientation="vertical" data-slider-selection="before" data-slider-tooltip="show" data-slider-id="yellow">
+                                            <input type="text" value="" class="slider form-control" data-slider-min="-200" data-slider-max="200" data-slider-step="5" data-slider-value="[-100,100]" data-slider-orientation="vertical" data-slider-selection="before" data-slider-tooltip="show" data-slider-id="aqua">
+                                            <input type="text" value="" class="slider form-control" data-slider-min="-200" data-slider-max="200" data-slider-step="5" data-slider-value="[-100,100]" data-slider-orientation="vertical" data-slider-selection="before" data-slider-tooltip="show" data-slider-id="purple">
+                                        </div>
+                                    </div>
+                                </div><!-- /.box-body -->
+                            </div><!-- /.box -->
+                        </div><!-- /.col -->
+                    </div><!-- /.row -->
                 </section><!-- /.content -->
             </aside><!-- /.right-side -->
         </div><!-- ./wrapper -->
@@ -411,9 +485,83 @@
         <!-- jQuery 2.0.2 -->
         <script src="js/jquery.2.0.2.min.js"></script>
         <!-- Bootstrap -->
-        <script src="js/plugins/bootstrap.min.js" type="text/javascript"></script>
+        <script src="../../js/bootstrap.min.js" type="text/javascript"></script>
         <!-- AdminLTE App -->
-        <script src="js/plugins/AdminLTE/app.js" type="text/javascript"></script>
+        <script src="../../js/AdminLTE/app.js" type="text/javascript"></script>
+        <!-- AdminLTE for demo purposes -->
+        <script src="../../js/AdminLTE/demo.js" type="text/javascript"></script>
+        <!-- Ion Slider -->
+        <script src="../../js/plugins/ionslider/ion.rangeSlider.min.js" type="text/javascript"></script>
+
+        <!-- Bootstrap slider -->
+        <script src="../../js/plugins/bootstrap-slider/bootstrap-slider.js" type="text/javascript"></script>
+
+        <script type="text/javascript">
+            $(function() {
+                /* BOOTSTRAP SLIDER */
+                $('.slider').slider();
+
+                /* ION SLIDER */
+                $("#range_1").ionRangeSlider({
+                    min: 0,
+                    max: 5000,
+                    from: 1000,
+                    to: 4000,
+                    type: 'double',
+                    step: 1,
+                    prefix: "$",
+                    prettify: false,
+                    hasGrid: true
+                });
+                $("#range_2").ionRangeSlider();
+
+                $("#range_5").ionRangeSlider({
+                    min: 0,
+                    max: 10,
+                    type: 'single',
+                    step: 0.1,
+                    postfix: " mm",
+                    prettify: false,
+                    hasGrid: true
+                });
+                $("#range_6").ionRangeSlider({
+                    min: -50,
+                    max: 50,
+                    from: 0,
+                    type: 'single',
+                    step: 1,
+                    postfix: "°",
+                    prettify: false,
+                    hasGrid: true
+                });
+
+                $("#range_4").ionRangeSlider({
+                    type: "single",
+                    step: 100,
+                    postfix: " light years",
+                    from: 55000,
+                    hideMinMax: true,
+                    hideFromTo: false
+                });
+                $("#range_3").ionRangeSlider({
+                    type: "double",
+                    postfix: " miles",
+                    step: 10000,
+                    from: 25000000,
+                    to: 35000000,
+                    onChange: function(obj) {
+                        var t = "";
+                        for (var prop in obj) {
+                            t += prop + ": " + obj[prop] + "\r\n";
+                        }
+                        $("#result").html(t);
+                    },
+                    onLoad: function(obj) {
+                        //
+                    }
+                });
+            });
+        </script>
 
     </body>
 </html>

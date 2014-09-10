@@ -5,13 +5,15 @@
         <title>AdminLTE | Dashboard</title>
         <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
         <!-- bootstrap 3.0.2 -->
-        <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+        <link href="../../css/bootstrap.min.css" rel="stylesheet" type="text/css" />
         <!-- font Awesome -->
-        <link href="css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+        <link href="../../css/font-awesome.min.css" rel="stylesheet" type="text/css" />
         <!-- Ionicons -->
-        <link href="css/ionicons.min.css" rel="stylesheet" type="text/css" />
+        <link href="../../css/ionicons.min.css" rel="stylesheet" type="text/css" />
+        <!-- jQuery UI -->
+        <link href="../../css/jQueryUI/jquery-ui-1.10.3.custom.css" rel="stylesheet" type="text/css" />
         <!-- Theme style -->
-        <link href="css/AdminLTE.css" rel="stylesheet" type="text/css" />
+        <link href="../../css/AdminLTE.css" rel="stylesheet" type="text/css" />
 
         <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
         <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -23,7 +25,7 @@
     <body class="skin-blue">
         <!-- header logo: style can be found in header.less -->
         <header class="header">
-            <a href="index2.php" class="logo">
+            <a href="../../index2.php" class="logo">
                 <!-- Add the class icon to your logo image or logo icon to add the margining -->
                 AdminLTE
             </a>
@@ -52,7 +54,7 @@
                                         <li><!-- start message -->
                                             <a href="#">
                                                 <div class="pull-left">
-                                                    <img src="img/avatar3.png" class="img-circle" alt="User Image"/>
+                                                    <img src="../../img/avatar3.png" class="img-circle" alt="User Image"/>
                                                 </div>
                                                 <h4>
                                                     Support Team
@@ -64,7 +66,7 @@
                                         <li>
                                             <a href="#">
                                                 <div class="pull-left">
-                                                    <img src="img/avatar2.png" class="img-circle" alt="user image"/>
+                                                    <img src="../../img/avatar2.png" class="img-circle" alt="user image"/>
                                                 </div>
                                                 <h4>
                                                     AdminLTE Design Team
@@ -76,7 +78,7 @@
                                         <li>
                                             <a href="#">
                                                 <div class="pull-left">
-                                                    <img src="img/avatar.png" class="img-circle" alt="user image"/>
+                                                    <img src="../../img/avatar.png" class="img-circle" alt="user image"/>
                                                 </div>
                                                 <h4>
                                                     Developers
@@ -88,7 +90,7 @@
                                         <li>
                                             <a href="#">
                                                 <div class="pull-left">
-                                                    <img src="img/avatar2.png" class="img-circle" alt="user image"/>
+                                                    <img src="../../img/avatar2.png" class="img-circle" alt="user image"/>
                                                 </div>
                                                 <h4>
                                                     Sales Department
@@ -100,7 +102,7 @@
                                         <li>
                                             <a href="#">
                                                 <div class="pull-left">
-                                                    <img src="img/avatar.png" class="img-circle" alt="user image"/>
+                                                    <img src="../../img/avatar.png" class="img-circle" alt="user image"/>
                                                 </div>
                                                 <h4>
                                                     Reviewers
@@ -235,7 +237,7 @@
                             <ul class="dropdown-menu">
                                 <!-- User image -->
                                 <li class="user-header bg-light-blue">
-                                    <img src="img/avatar3.png" class="img-circle" alt="User Image" />
+                                    <img src="../../img/avatar3.png" class="img-circle" alt="User Image" />
                                     <p>
                                         Jane Doe - Web Developer
                                         <small>Member since Nov. 2012</small>
@@ -270,13 +272,13 @@
         </header>
         <div class="wrapper row-offcanvas row-offcanvas-left">
             <!-- Left side column. contains the logo and sidebar -->
-            <aside class="left-side sidebar-offcanvas">                
+            <aside class="left-side sidebar-offcanvas">
                 <!-- sidebar: style can be found in sidebar.less -->
                 <section class="sidebar">
                     <!-- Sidebar user panel -->
                     <div class="user-panel">
                         <div class="pull-left image">
-                            <img src="img/avatar3.png" class="img-circle" alt="User Image" />
+                            <img src="../../img/avatar3.png" class="img-circle" alt="User Image" />
                         </div>
                         <div class="pull-left info">
                             <p>Hello, Jane</p>
@@ -297,12 +299,12 @@
                     <!-- sidebar menu: : style can be found in sidebar.less -->
                     <ul class="sidebar-menu">
                         <li class="active">
-                            <a href="index2.php">
+                            <a href="../../index2.php">
                                 <i class="fa fa-dashboard"></i> <span>Dashboard</span>
                             </a>
                         </li>
                         <li>
-                            <a href="pages/widgets.php">
+                            <a href="../widgets.php">
                                 <i class="fa fa-th"></i> <span>Widgets</span> <small class="badge pull-right bg-green">new</small>
                             </a>
                         </li>
@@ -313,9 +315,9 @@
                                 <i class="fa fa-angle-left pull-right"></i>
                             </a>
                             <ul class="treeview-menu">
-                                <li><a href="pages/charts/morris.php"><i class="fa fa-angle-double-right"></i> Morris</a></li>
-                                <li><a href="pages/charts/flot.php"><i class="fa fa-angle-double-right"></i> Flot</a></li>
-                                <li><a href="pages/charts/inline.php"><i class="fa fa-angle-double-right"></i> Inline charts</a></li>
+                                <li><a href="../charts/morris.php"><i class="fa fa-angle-double-right"></i> Morris</a></li>
+                                <li><a href="../charts/flot.php"><i class="fa fa-angle-double-right"></i> Flot</a></li>
+                                <li><a href="../charts/inline.php"><i class="fa fa-angle-double-right"></i> Inline charts</a></li>
                             </ul>
                         </li>
                         <li class="treeview">
@@ -325,11 +327,12 @@
                                 <i class="fa fa-angle-left pull-right"></i>
                             </a>
                             <ul class="treeview-menu">
-                                <li><a href="pages/UI/general.php"><i class="fa fa-angle-double-right"></i> General</a></li>
-                                <li><a href="pages/UI/icons.php"><i class="fa fa-angle-double-right"></i> Icons</a></li>
-                                <li><a href="pages/UI/buttons.php"><i class="fa fa-angle-double-right"></i> Buttons</a></li>
-                                <li><a href="pages/UI/sliders.php"><i class="fa fa-angle-double-right"></i> Sliders</a></li>
-                                <li><a href="pages/UI/timeline.php"><i class="fa fa-angle-double-right"></i> Timeline</a></li>
+                                <li><a href="general.php"><i class="fa fa-angle-double-right"></i> General</a></li>
+                                <li><a href="icons.php"><i class="fa fa-angle-double-right"></i> Icons</a></li>
+                                <li><a href="buttons.php"><i class="fa fa-angle-double-right"></i> Buttons</a></li>
+                                <li><a href="sliders.php"><i class="fa fa-angle-double-right"></i> Sliders</a></li>
+                                <li><a href="timeline.php"><i class="fa fa-angle-double-right"></i> Timeline</a></li>
+                                <li><a href="jQuery-ui.html"><i class="fa fa-angle-double-right"></i> jQuery UI</a></li>
                             </ul>
                         </li>
                         <li class="treeview">
@@ -338,9 +341,9 @@
                                 <i class="fa fa-angle-left pull-right"></i>
                             </a>
                             <ul class="treeview-menu">
-                                <li><a href="pages/forms/general.php"><i class="fa fa-angle-double-right"></i> General Elements</a></li>
-                                <li><a href="pages/forms/advanced.php"><i class="fa fa-angle-double-right"></i> Advanced Elements</a></li>
-                                <li><a href="pages/forms/editors.php"><i class="fa fa-angle-double-right"></i> Editors</a></li>
+                                <li><a href="../forms/general.php"><i class="fa fa-angle-double-right"></i> General Elements</a></li>
+                                <li><a href="../forms/advanced.php"><i class="fa fa-angle-double-right"></i> Advanced Elements</a></li>
+                                <li><a href="../forms/editors.php"><i class="fa fa-angle-double-right"></i> Editors</a></li>
                             </ul>
                         </li>
                         <li class="treeview">
@@ -349,20 +352,14 @@
                                 <i class="fa fa-angle-left pull-right"></i>
                             </a>
                             <ul class="treeview-menu">
-                                <li><a href="pages/tables/simple.php"><i class="fa fa-angle-double-right"></i> Simple tables</a></li>
-                                <li><a href="pages/tables/data.php"><i class="fa fa-angle-double-right"></i> Data tables</a></li>
+                                <li><a href="../tables/simple.php"><i class="fa fa-angle-double-right"></i> Simple tables</a></li>
+                                <li><a href="../tables/data.php"><i class="fa fa-angle-double-right"></i> Data tables</a></li>
                             </ul>
                         </li>
                         <li>
-                            <a href="pages/calendar.php">
+                            <a href="../calendar.php">
                                 <i class="fa fa-calendar"></i> <span>Calendar</span>
                                 <small class="badge pull-right bg-red">3</small>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="pages/mailbox.php">
-                                <i class="fa fa-envelope"></i> <span>Mailbox</span>
-                                <small class="badge pull-right bg-yellow">12</small>
                             </a>
                         </li>
                         <li class="treeview">
@@ -371,13 +368,13 @@
                                 <i class="fa fa-angle-left pull-right"></i>
                             </a>
                             <ul class="treeview-menu">
-                                <li><a href="pages/examples/invoice.php"><i class="fa fa-angle-double-right"></i> Invoice</a></li>
-                                <li><a href="pages/examples/login.php"><i class="fa fa-angle-double-right"></i> Login</a></li>
-                                <li><a href="pages/examples/register.php"><i class="fa fa-angle-double-right"></i> Register</a></li>
-                                <li><a href="pages/examples/lockscreen.php"><i class="fa fa-angle-double-right"></i> Lockscreen</a></li>
-                                <li><a href="pages/examples/404.php"><i class="fa fa-angle-double-right"></i> 404 Error</a></li>
-                                <li><a href="pages/examples/500.php"><i class="fa fa-angle-double-right"></i> 500 Error</a></li>
-                                <li><a href="pages/examples/blank.php"><i class="fa fa-angle-double-right"></i> Blank Page</a></li>
+                                <li><a href="../examples/invoice.php"><i class="fa fa-angle-double-right"></i> Invoice</a></li>
+                                <li><a href="../examples/login.php"><i class="fa fa-angle-double-right"></i> Login</a></li>
+                                <li><a href="../examples/register.php"><i class="fa fa-angle-double-right"></i> Register</a></li>
+                                <li><a href="../examples/lockscreen.php"><i class="fa fa-angle-double-right"></i> Lockscreen</a></li>
+                                <li><a href="../examples/404.php"><i class="fa fa-angle-double-right"></i> 404 Error</a></li>
+                                <li><a href="../examples/500.php"><i class="fa fa-angle-double-right"></i> 500 Error</a></li>
+                                <li><a href="../examples/blank.php"><i class="fa fa-angle-double-right"></i> Blank Page</a></li>
                             </ul>
                         </li>
                     </ul>
@@ -386,11 +383,11 @@
             </aside>
 
             <!-- Right side column. Contains the navbar and content of the page -->
-            <aside class="right-side">                
+            <aside class="right-side">
                 <!-- Content Header (Page header) -->
                 <section class="content-header">
                     <h1>
-                        Blank page
+                        jQuery UI
                         <small>Control panel</small>
                     </h1>
                     <ol class="breadcrumb">
@@ -401,7 +398,93 @@
 
                 <!-- Main content -->
                 <section class="content">
+                    <div class='row'>
+                        <div class='col-md-6'>
+                            <div class='box box-primary'>
+                                <div class='box-header'>
+                                    <h3 class='box-title'>Accordion</h3>
+                                </div>
+                                <div class='box-body pad'>
+                                    <div id="accordion">
+                                        <h3>Section 1</h3>
+                                        <div>
+                                            <p>
+                                                Mauris mauris ante, blandit et, ultrices a, suscipit eget, quam. Integer
+                                                ut neque. Vivamus nisi metus, molestie vel, gravida in, condimentum sit
+                                                amet, nunc. Nam a nibh. Donec suscipit eros. Nam mi. Proin viverra leo ut
+                                                odio. Curabitur malesuada. Vestibulum a velit eu ante scelerisque vulputate.
+                                            </p>
+                                        </div>
+                                        <h3>Section 2</h3>
+                                        <div>
+                                            <p>
+                                                Sed non urna. Donec et ante. Phasellus eu ligula. Vestibulum sit amet
+                                                purus. Vivamus hendrerit, dolor at aliquet laoreet, mauris turpis porttitor
+                                                velit, faucibus interdum tellus libero ac justo. Vivamus non quam. In
+                                                suscipit faucibus urna.
+                                            </p>
+                                        </div>
+                                        <h3>Section 3</h3>
+                                        <div>
+                                            <p>
+                                                Nam enim risus, molestie et, porta ac, aliquam ac, risus. Quisque lobortis.
+                                                Phasellus pellentesque purus in massa. Aenean in pede. Phasellus ac libero
+                                                ac tellus pellentesque semper. Sed ac felis. Sed commodo, magna quis
+                                                lacinia ornare, quam ante aliquam nisi, eu iaculis leo purus venenatis dui.
+                                            </p>
+                                            <ul>
+                                                <li>List item one</li>
+                                                <li>List item two</li>
+                                                <li>List item three</li>
+                                            </ul>
+                                        </div>
+                                        <h3>Section 4</h3>
+                                        <div>
+                                            <p>
+                                                Cras dictum. Pellentesque habitant morbi tristique senectus et netus
+                                                et malesuada fames ac turpis egestas. Vestibulum ante ipsum primis in
+                                                faucibus orci luctus et ultrices posuere cubilia Curae; Aenean lacinia
+                                                mauris vel est.
+                                            </p>
+                                            <p>
+                                                Suspendisse eu nisl. Nullam ut libero. Integer dignissim consequat lectus.
+                                                Class aptent taciti sociosqu ad litora torquent per conubia nostra, per
+                                                inceptos himenaeos.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div><!-- /.box accordion -->
+                        </div><!-- /.col left -->
+                        <!-- Right column -->
+                        <div class='col-md-6'>
+                            <div class='box box-danger'>
+                                <div class='box-header'>
+                                    <h3 class='box-title'>Date Picker</h3>
+                                </div>
+                                <div class="box-body">
+                                    <p>Date: <input type="text" id="datepicker"></p>
+                                    <p>Date range:</p>
+                                    <label for="from">From</label>
+                                    <input type="text" id="from" name="from">
+                                    <label for="to">to</label>
+                                    <input type="text" id="to" name="to">
+                                </div>
+                            </div>
+                            <div class='box box-info'>
+                                <div class='box-header'>
+                                    <h3 class='box-title'>Dialog</h3>
+                                </div>
+                                <div class='box-body'>
+                                    <div id="dialog" title="Basic dialog">
+                                        <p>This is an animated dialog which is useful for displaying information. The dialog window can be moved, resized and closed with the 'x' icon.</p>
+                                    </div>
 
+                                    <button id="opener">Open Dialog</button>
+                                </div>
+                            </div>
+                        </div><!-- /.col right -->
+                    </div><!-- /.row -->
 
                 </section><!-- /.content -->
             </aside><!-- /.right-side -->
@@ -410,10 +493,53 @@
 
         <!-- jQuery 2.0.2 -->
         <script src="js/jquery.2.0.2.min.js"></script>
+        <!-- jquery ui 1.10.3 -->
+        <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
+
         <!-- Bootstrap -->
-        <script src="js/plugins/bootstrap.min.js" type="text/javascript"></script>
+        <script src="../../js/bootstrap.min.js" type="text/javascript"></script>
         <!-- AdminLTE App -->
-        <script src="js/plugins/AdminLTE/app.js" type="text/javascript"></script>
+        <script src="../../js/AdminLTE/app.js" type="text/javascript"></script>
+        <!-- AdminLTE for demo purposes -->
+        <script src="../../js/AdminLTE/demo.js" type="text/javascript"></script>
+        <script>
+            $(function() {
+                $("#accordion").accordion();
+                $("#buttons > button").button();
+                $("#datepicker").datepicker();
+                $("#from").datepicker({
+                    defaultDate: "+1w",
+                    changeMonth: true,
+                    numberOfMonths: 3,
+                    onClose: function(selectedDate) {
+                        $("#to").datepicker("option", "minDate", selectedDate);
+                    }
+                });
+                $("#to").datepicker({
+                    defaultDate: "+1w",
+                    changeMonth: true,
+                    numberOfMonths: 3,
+                    onClose: function(selectedDate) {
+                        $("#from").datepicker("option", "maxDate", selectedDate);
+                    }
+                });
+                $("#dialog").dialog({
+                    autoOpen: false,
+                    show: {
+                        effect: "blind",
+                        duration: 1000
+                    },
+                    hide: {
+                        effect: "explode",
+                        duration: 1000
+                    }
+                });
+
+                $("#opener").click(function() {
+                    $("#dialog").dialog("open");
+                });
+            });
+        </script>
 
     </body>
 </html>

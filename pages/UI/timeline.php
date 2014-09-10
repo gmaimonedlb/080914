@@ -2,16 +2,16 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>AdminLTE | Dashboard</title>
+        <title>AdminLTE | Timeline</title>
         <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
         <!-- bootstrap 3.0.2 -->
-        <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+        <link href="../../css/bootstrap.min.css" rel="stylesheet" type="text/css" />
         <!-- font Awesome -->
-        <link href="css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+        <link href="../../css/font-awesome.min.css" rel="stylesheet" type="text/css" />
         <!-- Ionicons -->
-        <link href="css/ionicons.min.css" rel="stylesheet" type="text/css" />
+        <link href="../../css/ionicons.min.css" rel="stylesheet" type="text/css" />
         <!-- Theme style -->
-        <link href="css/AdminLTE.css" rel="stylesheet" type="text/css" />
+        <link href="../../css/AdminLTE.css" rel="stylesheet" type="text/css" />
 
         <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
         <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -23,7 +23,7 @@
     <body class="skin-blue">
         <!-- header logo: style can be found in header.less -->
         <header class="header">
-            <a href="index2.php" class="logo">
+            <a href="../../index2.php" class="logo">
                 <!-- Add the class icon to your logo image or logo icon to add the margining -->
                 AdminLTE
             </a>
@@ -52,7 +52,7 @@
                                         <li><!-- start message -->
                                             <a href="#">
                                                 <div class="pull-left">
-                                                    <img src="img/avatar3.png" class="img-circle" alt="User Image"/>
+                                                    <img src="../../img/avatar3.png" class="img-circle" alt="User Image"/>
                                                 </div>
                                                 <h4>
                                                     Support Team
@@ -64,7 +64,7 @@
                                         <li>
                                             <a href="#">
                                                 <div class="pull-left">
-                                                    <img src="img/avatar2.png" class="img-circle" alt="user image"/>
+                                                    <img src="../../img/avatar2.png" class="img-circle" alt="user image"/>
                                                 </div>
                                                 <h4>
                                                     AdminLTE Design Team
@@ -76,7 +76,7 @@
                                         <li>
                                             <a href="#">
                                                 <div class="pull-left">
-                                                    <img src="img/avatar.png" class="img-circle" alt="user image"/>
+                                                    <img src="../../img/avatar.png" class="img-circle" alt="user image"/>
                                                 </div>
                                                 <h4>
                                                     Developers
@@ -88,7 +88,7 @@
                                         <li>
                                             <a href="#">
                                                 <div class="pull-left">
-                                                    <img src="img/avatar2.png" class="img-circle" alt="user image"/>
+                                                    <img src="../../img/avatar2.png" class="img-circle" alt="user image"/>
                                                 </div>
                                                 <h4>
                                                     Sales Department
@@ -100,7 +100,7 @@
                                         <li>
                                             <a href="#">
                                                 <div class="pull-left">
-                                                    <img src="img/avatar.png" class="img-circle" alt="user image"/>
+                                                    <img src="../../img/avatar.png" class="img-circle" alt="user image"/>
                                                 </div>
                                                 <h4>
                                                     Reviewers
@@ -235,7 +235,7 @@
                             <ul class="dropdown-menu">
                                 <!-- User image -->
                                 <li class="user-header bg-light-blue">
-                                    <img src="img/avatar3.png" class="img-circle" alt="User Image" />
+                                    <img src="../../img/avatar3.png" class="img-circle" alt="User Image" />
                                     <p>
                                         Jane Doe - Web Developer
                                         <small>Member since Nov. 2012</small>
@@ -270,13 +270,13 @@
         </header>
         <div class="wrapper row-offcanvas row-offcanvas-left">
             <!-- Left side column. contains the logo and sidebar -->
-            <aside class="left-side sidebar-offcanvas">                
+            <aside class="left-side sidebar-offcanvas">
                 <!-- sidebar: style can be found in sidebar.less -->
                 <section class="sidebar">
                     <!-- Sidebar user panel -->
                     <div class="user-panel">
                         <div class="pull-left image">
-                            <img src="img/avatar3.png" class="img-circle" alt="User Image" />
+                            <img src="../../img/avatar3.png" class="img-circle" alt="User Image" />
                         </div>
                         <div class="pull-left info">
                             <p>Hello, Jane</p>
@@ -296,13 +296,13 @@
                     <!-- /.search form -->
                     <!-- sidebar menu: : style can be found in sidebar.less -->
                     <ul class="sidebar-menu">
-                        <li class="active">
-                            <a href="index2.php">
+                        <li>
+                            <a href="../../index2.php">
                                 <i class="fa fa-dashboard"></i> <span>Dashboard</span>
                             </a>
                         </li>
                         <li>
-                            <a href="pages/widgets.php">
+                            <a href="../widgets.php">
                                 <i class="fa fa-th"></i> <span>Widgets</span> <small class="badge pull-right bg-green">new</small>
                             </a>
                         </li>
@@ -313,23 +313,23 @@
                                 <i class="fa fa-angle-left pull-right"></i>
                             </a>
                             <ul class="treeview-menu">
-                                <li><a href="pages/charts/morris.php"><i class="fa fa-angle-double-right"></i> Morris</a></li>
-                                <li><a href="pages/charts/flot.php"><i class="fa fa-angle-double-right"></i> Flot</a></li>
-                                <li><a href="pages/charts/inline.php"><i class="fa fa-angle-double-right"></i> Inline charts</a></li>
+                                <li><a href="../charts/morris.php"><i class="fa fa-angle-double-right"></i> Morris</a></li>
+                                <li><a href="../charts/flot.php"><i class="fa fa-angle-double-right"></i> Flot</a></li>
+                                <li><a href="../charts/inline.php"><i class="fa fa-angle-double-right"></i> Inline charts</a></li>
                             </ul>
                         </li>
-                        <li class="treeview">
+                        <li class="treeview active">
                             <a href="#">
                                 <i class="fa fa-laptop"></i>
                                 <span>UI Elements</span>
                                 <i class="fa fa-angle-left pull-right"></i>
                             </a>
                             <ul class="treeview-menu">
-                                <li><a href="pages/UI/general.php"><i class="fa fa-angle-double-right"></i> General</a></li>
-                                <li><a href="pages/UI/icons.php"><i class="fa fa-angle-double-right"></i> Icons</a></li>
-                                <li><a href="pages/UI/buttons.php"><i class="fa fa-angle-double-right"></i> Buttons</a></li>
-                                <li><a href="pages/UI/sliders.php"><i class="fa fa-angle-double-right"></i> Sliders</a></li>
-                                <li><a href="pages/UI/timeline.php"><i class="fa fa-angle-double-right"></i> Timeline</a></li>
+                                <li><a href="general.php"><i class="fa fa-angle-double-right"></i> General</a></li>
+                                <li><a href="icons.php"><i class="fa fa-angle-double-right"></i> Icons</a></li>
+                                <li><a href="buttons.php"><i class="fa fa-angle-double-right"></i> Buttons</a></li>
+                                <li><a href="sliders.php"><i class="fa fa-angle-double-right"></i> Sliders</a></li>
+                                <li class="active"><a href="timeline.php"><i class="fa fa-angle-double-right"></i> Timeline</a></li>
                             </ul>
                         </li>
                         <li class="treeview">
@@ -338,9 +338,9 @@
                                 <i class="fa fa-angle-left pull-right"></i>
                             </a>
                             <ul class="treeview-menu">
-                                <li><a href="pages/forms/general.php"><i class="fa fa-angle-double-right"></i> General Elements</a></li>
-                                <li><a href="pages/forms/advanced.php"><i class="fa fa-angle-double-right"></i> Advanced Elements</a></li>
-                                <li><a href="pages/forms/editors.php"><i class="fa fa-angle-double-right"></i> Editors</a></li>
+                                <li><a href="../forms/general.php"><i class="fa fa-angle-double-right"></i> General Elements</a></li>
+                                <li><a href="../forms/advanced.php"><i class="fa fa-angle-double-right"></i> Advanced Elements</a></li>
+                                <li><a href="../forms/editors.php"><i class="fa fa-angle-double-right"></i> Editors</a></li>
                             </ul>
                         </li>
                         <li class="treeview">
@@ -349,18 +349,18 @@
                                 <i class="fa fa-angle-left pull-right"></i>
                             </a>
                             <ul class="treeview-menu">
-                                <li><a href="pages/tables/simple.php"><i class="fa fa-angle-double-right"></i> Simple tables</a></li>
-                                <li><a href="pages/tables/data.php"><i class="fa fa-angle-double-right"></i> Data tables</a></li>
+                                <li><a href="../tables/simple.php"><i class="fa fa-angle-double-right"></i> Simple tables</a></li>
+                                <li><a href="../tables/data.php"><i class="fa fa-angle-double-right"></i> Data tables</a></li>
                             </ul>
                         </li>
                         <li>
-                            <a href="pages/calendar.php">
+                            <a href="../calendar.php">
                                 <i class="fa fa-calendar"></i> <span>Calendar</span>
                                 <small class="badge pull-right bg-red">3</small>
                             </a>
                         </li>
                         <li>
-                            <a href="pages/mailbox.php">
+                            <a href="../mailbox.php">
                                 <i class="fa fa-envelope"></i> <span>Mailbox</span>
                                 <small class="badge pull-right bg-yellow">12</small>
                             </a>
@@ -371,13 +371,13 @@
                                 <i class="fa fa-angle-left pull-right"></i>
                             </a>
                             <ul class="treeview-menu">
-                                <li><a href="pages/examples/invoice.php"><i class="fa fa-angle-double-right"></i> Invoice</a></li>
-                                <li><a href="pages/examples/login.php"><i class="fa fa-angle-double-right"></i> Login</a></li>
-                                <li><a href="pages/examples/register.php"><i class="fa fa-angle-double-right"></i> Register</a></li>
-                                <li><a href="pages/examples/lockscreen.php"><i class="fa fa-angle-double-right"></i> Lockscreen</a></li>
-                                <li><a href="pages/examples/404.php"><i class="fa fa-angle-double-right"></i> 404 Error</a></li>
-                                <li><a href="pages/examples/500.php"><i class="fa fa-angle-double-right"></i> 500 Error</a></li>
-                                <li><a href="pages/examples/blank.php"><i class="fa fa-angle-double-right"></i> Blank Page</a></li>
+                                <li><a href="../examples/invoice.php"><i class="fa fa-angle-double-right"></i> Invoice</a></li>
+                                <li><a href="../examples/login.php"><i class="fa fa-angle-double-right"></i> Login</a></li>
+                                <li><a href="../examples/register.php"><i class="fa fa-angle-double-right"></i> Register</a></li>
+                                <li><a href="../examples/lockscreen.php"><i class="fa fa-angle-double-right"></i> Lockscreen</a></li>
+                                <li><a href="../examples/404.php"><i class="fa fa-angle-double-right"></i> 404 Error</a></li>
+                                <li><a href="../examples/500.php"><i class="fa fa-angle-double-right"></i> 500 Error</a></li>
+                                <li><a href="../examples/blank.php"><i class="fa fa-angle-double-right"></i> Blank Page</a></li>
                             </ul>
                         </li>
                     </ul>
@@ -386,34 +386,183 @@
             </aside>
 
             <!-- Right side column. Contains the navbar and content of the page -->
-            <aside class="right-side">                
+            <aside class="right-side">
                 <!-- Content Header (Page header) -->
                 <section class="content-header">
                     <h1>
-                        Blank page
-                        <small>Control panel</small>
+                        Timeline
+                        <small>example</small>
                     </h1>
                     <ol class="breadcrumb">
                         <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
-                        <li class="active">Blank page</li>
+                        <li><a href="#">UI</a></li>
+                        <li class="active">Timeline</li>
                     </ol>
                 </section>
 
                 <!-- Main content -->
                 <section class="content">
 
+                    <!-- row -->
+                    <div class="row">
+                        <div class="col-md-12">
+                            <!-- The time line -->
+                            <ul class="timeline">
+                                <!-- timeline time label -->
+                                <li class="time-label">
+                                    <span class="bg-red">
+                                        10 Feb. 2014
+                                    </span>
+                                </li>
+                                <!-- /.timeline-label -->
+                                <!-- timeline item -->
+                                <li>
+                                    <i class="fa fa-envelope bg-blue"></i>
+                                    <div class="timeline-item">
+                                        <span class="time"><i class="fa fa-clock-o"></i> 12:05</span>
+                                        <h3 class="timeline-header"><a href="#">Support Team</a> sent you and email</h3>
+                                        <div class="timeline-body">
+                                            Etsy doostang zoodles disqus groupon greplin oooj voxy zoodles,
+                                            weebly ning heekya handango imeem plugg dopplr jibjab, movity
+                                            jajah plickers sifteo edmodo ifttt zimbra. Babblely odeo kaboodle
+                                            quora plaxo ideeli hulu weebly balihoo...
+                                        </div>
+                                        <div class='timeline-footer'>
+                                            <a class="btn btn-primary btn-xs">Read more</a>
+                                            <a class="btn btn-danger btn-xs">Delete</a>
+                                        </div>
+                                    </div>
+                                </li>
+                                <!-- END timeline item -->
+                                <!-- timeline item -->
+                                <li>
+                                    <i class="fa fa-user bg-aqua"></i>
+                                    <div class="timeline-item">
+                                        <span class="time"><i class="fa fa-clock-o"></i> 5 mins ago</span>
+                                        <h3 class="timeline-header no-border"><a href="#">Sarah Young</a> accepted your friend request</h3>
+                                    </div>
+                                </li>
+                                <!-- END timeline item -->
+                                <!-- timeline item -->
+                                <li>
+                                    <i class="fa fa-comments bg-yellow"></i>
+                                    <div class="timeline-item">
+                                        <span class="time"><i class="fa fa-clock-o"></i> 27 mins ago</span>
+                                        <h3 class="timeline-header"><a href="#">Jay White</a> commented on your post</h3>
+                                        <div class="timeline-body">
+                                            Take me to your leader!
+                                            Switzerland is small and neutral!
+                                            We are more like Germany, ambitious and misunderstood!
+                                        </div>
+                                        <div class='timeline-footer'>
+                                            <a class="btn btn-warning btn-flat btn-xs">View comment</a>
+                                        </div>
+                                    </div>
+                                </li>
+                                <!-- END timeline item -->
+                                <!-- timeline time label -->
+                                <li class="time-label">
+                                    <span class="bg-green">
+                                        3 Jan. 2014
+                                    </span>
+                                </li>
+                                <!-- /.timeline-label -->
+                                <!-- timeline item -->
+                                <li>
+                                    <i class="fa fa-camera bg-purple"></i>
+                                    <div class="timeline-item">
+                                        <span class="time"><i class="fa fa-clock-o"></i> 2 days ago</span>
+                                        <h3 class="timeline-header"><a href="#">Mina Lee</a> uploaded new photos</h3>
+                                        <div class="timeline-body">
+                                            <img src="http://placehold.it/150x100" alt="..." class='margin' />
+                                            <img src="http://placehold.it/150x100" alt="..." class='margin'/>
+                                            <img src="http://placehold.it/150x100" alt="..." class='margin'/>
+                                            <img src="http://placehold.it/150x100" alt="..." class='margin'/>
+                                        </div>
+                                    </div>
+                                </li>
+                                <!-- END timeline item -->
+                                <!-- timeline item -->
+                                <li>
+                                    <i class="fa fa-video-camera bg-maroon"></i>
+                                    <div class="timeline-item">
+                                        <span class="time"><i class="fa fa-clock-o"></i> 5 days ago</span>
+                                        <h3 class="timeline-header"><a href="#">Mr. Doe</a> shared a video</h3>
+                                        <div class="timeline-body">
+                                            <iframe width="300" height="169" src="//www.youtube.com/embed/fLe_qO4AE-M" frameborder="0" allowfullscreen></iframe>
+                                        </div>
+                                        <div class="timeline-footer">
+                                            <a href="#" class="btn btn-xs bg-maroon">See comments</a>
+                                        </div>
+                                    </div>
+                                </li>
+                                <!-- END timeline item -->
+                                <li>
+                                    <i class="fa fa-clock-o"></i>
+                                </li>
+                            </ul>
+                        </div><!-- /.col -->
+                    </div><!-- /.row -->
+
+                    <div class="row" style="margin-top: 10px;">
+                        <div class="col-md-12">
+                            <div class="box box-primary">
+                                <div class="box-header">
+                                    <h3 class="box-title"><i class="fa fa-code"></i> Timeline Markup</h3>
+                                </div>
+                                <div class="box-body">
+                                    <pre style="font-weight: 600;">
+&lt;ul class="timeline">
+
+    &lt;!-- timeline time label -->
+    &lt;li class="time-label">
+        &lt;span class="bg-red">
+            10 Feb. 2014
+        &lt;/span>
+    &lt;/li>
+    &lt;!-- /.timeline-label -->
+
+    &lt;!-- timeline item -->
+    &lt;li>
+        &lt;!-- timeline icon -->
+        &lt;i class="fa fa-envelope bg-blue">&lt;/i>
+        &lt;div class="timeline-item">
+            &lt;span class="time">&lt;i class="fa fa-clock-o">&lt;/i> 12:05&lt;/span>
+
+            &lt;h3 class="timeline-header">&lt;a href="#">Support Team&lt;/a> ...&lt;/h3>
+
+            &lt;div class="timeline-body">
+                ...
+                Content goes here
+            &lt;/div>
+
+            &lt;div class='timeline-footer'>
+                &lt;a class="btn btn-primary btn-xs">...&lt;/a>
+            &lt;/div>
+        &lt;/div>
+    &lt;/li>
+    &lt;!-- END timeline item -->
+
+    ...
+
+&lt;/ul>
+                                    </pre>
+                                </div><!-- /.box-body -->
+                            </div><!-- /.box -->
+                        </div><!-- /.col -->
+                    </div><!-- /.row -->
 
                 </section><!-- /.content -->
             </aside><!-- /.right-side -->
         </div><!-- ./wrapper -->
 
-
         <!-- jQuery 2.0.2 -->
         <script src="js/jquery.2.0.2.min.js"></script>
         <!-- Bootstrap -->
-        <script src="js/plugins/bootstrap.min.js" type="text/javascript"></script>
+        <script src="../../js/bootstrap.min.js" type="text/javascript"></script>
         <!-- AdminLTE App -->
-        <script src="js/plugins/AdminLTE/app.js" type="text/javascript"></script>
-
+        <script src="../../js/AdminLTE/app.js" type="text/javascript"></script>
+        <!-- AdminLTE for demo purposes -->
+        <script src="../../js/AdminLTE/demo.js" type="text/javascript"></script>
     </body>
 </html>
