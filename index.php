@@ -84,8 +84,7 @@ if(isset($_COOKIE["session"]))
                     <button type="submit" class="btn bg-black btn-block">Sign me in</button>
                     
                     <p><a href="#">I forgot my password</a></p>
-                    
-                    <a href="register.html" class="text-center">Register a new membership</a>
+
                 </div>
             </form>
 
@@ -171,13 +170,6 @@ if(isset($_COOKIE["session"]))
 
     });
 
-
-    $body = $("body");
-
-    $(document).on({
-        ajaxStart: function() { $body.addClass("loading");    },
-        ajaxStop: function() { $body.removeClass("loading"); }
-    });
 
 
 </script>

@@ -25,3 +25,9 @@ function getDoc(frame) {
     }
     return doc;
 }
+
+$body = $("body");
+$(document).on({
+    ajaxStart: function() { $body.addClass("loading");    },
+    ajaxStop: function() { $body.removeClass("loading"); }
+});
