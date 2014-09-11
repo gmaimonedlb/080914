@@ -33,9 +33,10 @@
     <body class="skin-blue">
         <!-- header logo: style can be found in header.less -->
         <header class="header">
+        <?php echo $_COOKIE['session']?>
             <a href="index2.php" class="logo">
                 <!-- Add the class icon to your logo image or logo icon to add the margining -->
-                AdminLTE
+                DLB GROUP
             </a>
             <!-- Header Navbar: style can be found in header.less -->
             <nav class="navbar navbar-static-top" role="navigation">

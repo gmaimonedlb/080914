@@ -1,7 +1,16 @@
+<?php
+if(isset($_COOKIE["session"]))
+{
+    echo "<script>window.location='index2.php'</script>";
+}
+ //   setcookie('session', "hola", time() + 1*24*60*60);
+
+?>
+
 <style>
     .bg-black
     {
-        background-image: url('developerimg/dlbbackground.jpeg');
+        background-image: url('img/developer/dlbbackground.jpeg');
         background-position: center;
         background-repeat: no-repeat;
         background-size: 100% auto;
@@ -11,7 +20,7 @@
 <html class="bg-black">
     <head>
         <meta charset="UTF-8">
-        <title>AdminLTE | Log in</title>
+        <title>DLBGROUP WORLDWIDE</title>
         <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
         <!-- bootstrap 3.0.2 -->
         <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" />
