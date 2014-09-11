@@ -24,7 +24,7 @@ class usersc // users controller
             echo 0;
             setcookie('session',"", time()-3600);
         }else{
-            setcookie('session', json_encode($this->usersm->login($user, $password)), time() + 1*24*60*60);
+            if(isset($_REQUEST['remember_me']))  setcookie('session', json_encode($this->usersm->login($user, $password)), time() + 1*24*60*60);
             $_SESSION['session'] = $this->usersm->login($user, $password);
             echo 1;
         }

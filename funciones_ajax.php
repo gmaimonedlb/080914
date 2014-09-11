@@ -8,11 +8,16 @@
 require_once('usersc.php');
 if(isset($_REQUEST['func']))
 {
-    if($_REQUEST['func']==1)
+    if($_REQUEST['func']==1)  // autentica al usuario
     {
         $usersc = new usersc();
         $login = $usersc->login_user($_REQUEST['email'],$_REQUEST['password']);
 
     }
+    if($_REQUEST['func']==2)
+    {
+
+    }
+
 
 }

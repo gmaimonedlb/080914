@@ -1,3 +1,30 @@
+<style>
+
+    .modal_loading {
+        display:    none;
+        position:   fixed;
+        top:        0;
+        left:       0;
+        height:     100%;
+        width:      100%;
+        background: url("img/ajax-loader1.gif") no-repeat scroll 50% 50% transparent;
+        z-index: 1020;
+
+    }
+
+
+
+    body.loading {
+        overflow: hidden;
+    }
+
+
+    body.loading .modal_loading {
+        display: block;
+    }
+
+</style>
+
 <?php
 setcookie("session", "", time()-3600);
 if(isset($_COOKIE["session"]))
@@ -50,7 +77,7 @@ if(isset($_COOKIE["session"]))
                         <input type="password" name="password" id="password" class="form-control" placeholder="Password" required/>
                     </div>          
                     <div class="form-group">
-                        <input type="checkbox" name="remember_me"/> Remember me
+                        <input type="checkbox" name="remember_me" id="remember_me"/> Remember me
                     </div>
                 </div>
                 <div class="footer">                                                               
@@ -77,13 +104,14 @@ if(isset($_COOKIE["session"]))
         <script src="js/jquery.2.0.2.min.js"></script>
         <!-- Bootstrap -->
         <script src="js/bootstrap.min.js" type="text/javascript"></script>
+        <!-- funciones custom -->
         <script src="funciones.js"></script>
+
 
     </body>
 </html>
 
 <script type="application/javascript">
-
 
     $("#login").submit(function(e)
     {
@@ -142,4 +170,15 @@ if(isset($_COOKIE["session"]))
         }
 
     });
+
+
+    $body = $("body");
+
+    $(document).on({
+        ajaxStart: function() { $body.addClass("loading");    },
+        ajaxStop: function() { $body.removeClass("loading"); }
+    });
+
+
 </script>
+<div class="modal_loading"><!-- Place at bottom of page --></div>

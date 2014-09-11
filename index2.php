@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html>
     <head>
@@ -33,7 +34,7 @@
     <body class="skin-blue">
         <!-- header logo: style can be found in header.less -->
         <header class="header">
-        <?php echo $_COOKIE['session']?>
+        <?php echo $_COOKIE['session']; var_dump($_SESSION['session']) ;?>
             <a href="index2.php" class="logo">
                 <!-- Add the class icon to your logo image or logo icon to add the margining -->
                 DLB GROUP
