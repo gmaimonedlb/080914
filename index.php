@@ -1,30 +1,3 @@
-<style>
-
-    .modal_loading {
-        display:    none;
-        position:   fixed;
-        top:        0;
-        left:       0;
-        height:     100%;
-        width:      100%;
-        background: url("img/ajax-loader1.gif") no-repeat scroll 50% 50% transparent;
-        z-index: 1020;
-
-    }
-
-
-
-    body.loading {
-        overflow: hidden;
-    }
-
-
-    body.loading .modal_loading {
-        display: block;
-    }
-
-</style>
-
 <?php
 setcookie("session", "", time()-3600);
 if(isset($_COOKIE["session"]))
@@ -103,35 +76,14 @@ if(isset($_COOKIE["session"]))
         <!-- jQuery 2.0.2 -->
         <script src="js/jquery.2.0.2.min.js"></script>
         <!-- Bootstrap -->
-        <script src="js/bootstrap.min.js" type="text/javascript"></script>        
+        <script src="js/bootstrap.min.js" type="text/javascript"></script>
+        <script src="funciones.js"></script>
 
     </body>
 </html>
 
 <script type="application/javascript">
-    function getDoc(frame) {
-        var doc = null;
 
-        // IE8 cascading access check
-        try {
-            if (frame.contentWindow) {
-                doc = frame.contentWindow.document;
-            }
-        } catch(err) {
-        }
-
-        if (doc) { // successful getting content
-            return doc;
-        }
-
-        try { // simply checking may throw in ie8 under ssl or mismatched protocol
-            doc = frame.contentDocument ? frame.contentDocument : frame.document;
-        } catch(err) {
-            // last attempt
-            doc = frame.document;
-        }
-        return doc;
-    }
 
     $("#login").submit(function(e)
     {
@@ -190,15 +142,4 @@ if(isset($_COOKIE["session"]))
         }
 
     });
-
-
-    $body = $("body");
-
-    $(document).on({
-        ajaxStart: function() { $body.addClass("loading");    },
-        ajaxStop: function() { $body.removeClass("loading"); }
-    });
-
-
 </script>
-<div class="modal_loading"><!-- Place at bottom of page --></div>
