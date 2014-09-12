@@ -31,4 +31,14 @@ class usersc // users controller
 
 
     }
+    function logout_user($id)
+    {
+
+        if(isset($_COOKIE['session']))  setcookie('session', "", time()-3600);
+        if(isset($_SESSION['session'])) session_destroy();
+        echo 1;
+
+
+
+    }
 }

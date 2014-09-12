@@ -14,9 +14,10 @@ if(isset($_REQUEST['func']))
         $login = $usersc->login_user($_REQUEST['email'],$_REQUEST['password']);
 
     }
-    if($_REQUEST['func']==2)
+    if($_REQUEST['func']==2) // logout del usuario
     {
-
+        $usersc = new usersc();
+        $login = $usersc->logout_user($_REQUEST['user_id']);
     }
 
 

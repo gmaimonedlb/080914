@@ -1,31 +1,3 @@
-hola
-<style>
-
-    .modal_loading {
-        display:    none;
-        position:   fixed;
-        top:        0;
-        left:       0;
-        height:     100%;
-        width:      100%;
-        background: url("img/ajax-loader1.gif") no-repeat scroll 50% 50% transparent;
-        z-index: 1020;
-
-    }
-
-
-
-    body.loading {
-        overflow: hidden;
-    }
-
-
-    body.loading .modal_loading {
-        display: block;
-    }
-
-</style>
-
 <?php
 setcookie("session", "", time()-3600);
 if(isset($_COOKIE["session"]))
