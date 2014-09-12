@@ -3534,3 +3534,30 @@ fieldset[disabled] .btn-vk.active {
   color: #587ea3;
   background-color: #ffffff;
 }
+
+
+
+.modal_loading {
+    display:    none;
+    position:   fixed;
+    top:        0;
+    left:       0;
+    height:     100%;
+    width:      100%;
+    background: url("../img/ajax-loader1.gif") no-repeat scroll 50% 50% transparent;
+    z-index: 1020;
+    opacity: 0.3;
+    background-color: #696969;
+
+}
+
+
+
+body.loading {
+    overflow: hidden;
+}
+
+
+body.loading .modal_loading {
+    display: block;
+}

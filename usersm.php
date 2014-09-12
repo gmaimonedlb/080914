@@ -27,12 +27,12 @@ class usersm // users model todas las funciones realacionadas al mysql
 
     function lista_usuarios()
     {
-        $sql = mysqli_query($this->connection->myconn,"SELECT  us.f_name, us.l_name, us.email, ca.nombre as cargo, ca.descripcion, tu.name as tipo_usu, tu.create, tu.read, tu.update, tu.delete, tu.create_user, tu.authorize   FROM tipos_user tu INNER JOIN users us ON us.id_tipo = tu.id INNER JOIN cargos ca ON ca.id = us.id_carg ");
+        $sql = mysqli_query($this->connection->myconn,"SELECT  us.id as user_id, us.f_name, us.l_name, us.email, ca.nombre as cargo, ca.descripcion, tu.name as tipo_usu, tu.create, tu.read, tu.update, tu.delete, tu.create_user, tu.authorize   FROM tipos_user tu INNER JOIN users us ON us.id_tipo = tu.id INNER JOIN cargos ca ON ca.id = us.id_carg ");
         return $data = $this::genera_objeto($sql);
     }
     function busca_usuario($id)
     {
-        $sql = mysqli_query($this->connection->myconn,"SELECT  us.f_name, us.l_name, us.email, ca.nombre as cargo, ca.descripcion, tu.name as tipo_usu, tu.create, tu.read, tu.update, tu.delete, tu.create_user, tu.authorize   FROM tipos_user tu INNER JOIN users us ON us.id_tipo = tu.id INNER JOIN cargos ca ON ca.id = us.id_carg  where us.id=".$id);
+        $sql = mysqli_query($this->connection->myconn,"SELECT  us.id as user_id, us.f_name, us.l_name, us.email, ca.nombre as cargo, ca.descripcion, tu.name as tipo_usu, tu.create, tu.read, tu.update, tu.delete, tu.create_user, tu.authorize   FROM tipos_user tu INNER JOIN users us ON us.id_tipo = tu.id INNER JOIN cargos ca ON ca.id = us.id_carg  where us.id=".$id);
         return $data = $this::genera_objeto($sql);
     }
     function actualiza_usuario2($data, $id)
@@ -55,7 +55,7 @@ class usersm // users model todas las funciones realacionadas al mysql
     }
     function login($user, $password)
     {
-        $sql = mysqli_query($this->connection->myconn,"SELECT  us.f_name, us.l_name, us.email, us.image, ca.nombre as cargo, ca.descripcion, tu.name as tipo_usu, tu.create, tu.read, tu.update, tu.delete, tu.create_user, tu.authorize   FROM tipos_user tu INNER JOIN users us ON us.id_tipo = tu.id INNER JOIN cargos ca ON ca.id = us.id_carg where email = '$user' AND password = '$password'");
+        $sql = mysqli_query($this->connection->myconn,"SELECT  us.id as user_id, us.f_name, us.l_name, us.email, us.image, ca.nombre as cargo, ca.descripcion, tu.name as tipo_usu, tu.create, tu.read, tu.update, tu.delete, tu.create_user, tu.authorize   FROM tipos_user tu INNER JOIN users us ON us.id_tipo = tu.id INNER JOIN cargos ca ON ca.id = us.id_carg where email = '$user' AND password = '$password'");
         $user = $this::genera_objeto($sql);
         return $user;
 
