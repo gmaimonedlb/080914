@@ -1,5 +1,6 @@
+<?php ?>
 <header class="header">
-    <a href="../../index.html" class="logo">
+    <a href="index.html" class="logo">
         <!-- Add the class icon to your logo image or logo icon to add the margining -->
         DLB GROUP worldwide
     </a>
@@ -28,7 +29,7 @@
                                 <li><!-- start message -->
                                     <a href="#">
                                         <div class="pull-left">
-                                            <img src="../../img/avatar3_.png" class="img-circle" alt="User Image"/>
+                                            <img src="img/avatar3_.png" class="img-circle" alt="User Image"/>
                                         </div>
                                         <h4>
                                             Support Team
@@ -40,7 +41,7 @@
                                 <li>
                                     <a href="#">
                                         <div class="pull-left">
-                                            <img src="../../img/avatar2.png" class="img-circle" alt="user image"/>
+                                            <img src="img/avatar2.png" class="img-circle" alt="user image"/>
                                         </div>
                                         <h4>
                                             AdminLTE Design Team
@@ -52,7 +53,7 @@
                                 <li>
                                     <a href="#">
                                         <div class="pull-left">
-                                            <img src="../../img/avatar.png" class="img-circle" alt="user image"/>
+                                            <img src="img/avatar.png" class="img-circle" alt="user image"/>
                                         </div>
                                         <h4>
                                             Developers
@@ -64,7 +65,7 @@
                                 <li>
                                     <a href="#">
                                         <div class="pull-left">
-                                            <img src="../../img/avatar2.png" class="img-circle" alt="user image"/>
+                                            <img src="img/avatar2.png" class="img-circle" alt="user image"/>
                                         </div>
                                         <h4>
                                             Sales Department
@@ -76,7 +77,7 @@
                                 <li>
                                     <a href="#">
                                         <div class="pull-left">
-                                            <img src="../../img/avatar.png" class="img-circle" alt="user image"/>
+                                            <img src="img/avatar.png" class="img-circle" alt="user image"/>
                                         </div>
                                         <h4>
                                             Reviewers
@@ -211,7 +212,7 @@
                     <ul class="dropdown-menu">
                         <!-- User image -->
                         <li class="user-header bg-light-blue">
-                            <img src="../../img/avatar3.png" class="img-circle" alt="User Image" />
+                            <img src="img/avatar3.png" class="img-circle" alt="User Image" />
                             <p>
                                 Jane Doe - Web Developer
                                 <small>Member since Nov. 2012</small>

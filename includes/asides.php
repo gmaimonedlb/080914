@@ -7,7 +7,7 @@
 <!-- Sidebar user panel -->
 <div class="user-panel">
     <div class="pull-left image">
-        <img src="../../img/avatar3.png" class="img-circle" alt="User Image" />
+        <img src="img/avatar3.png" class="img-circle" alt="User Image" />
         <!--img src="<php echo 'foto.jpg' ?>" class="img-circle" alt="User Image" /-->
     </div>
 
@@ -33,7 +33,7 @@
 <!-- sidebar menu: : style can be found in sidebar.less -->
 <ul class="sidebar-menu">
     <li>
-        <a href="../../index.html">
+        <a href="index.html">
             <i class="fa fa-dashboard"></i> <span>Dashboard</span>
         </a>
     </li>
