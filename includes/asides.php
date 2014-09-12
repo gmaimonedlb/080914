@@ -1,7 +1,9 @@
 <!-- Left side column. contains the logo and sidebar -->
 <aside class="left-side sidebar-offcanvas">
+
     <!-- sidebar: style can be found in sidebar.less -->
     <section class="sidebar">
+
         <!-- Sidebar user panel -->
         <div class="user-panel">
             <div class="pull-left image">
@@ -10,8 +12,8 @@
             </div>
 
             <div class="pull-left info">
-                <!--p>Hello, Jane</p-->
-                <p>Hola, <?php echo $fila[1]; ?></p>
+                <p>Hello, Jane</p>
+                <!--p>Hola, < ?php echo $fila[1]; ?></p-->
                 <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
                 <!--a href="#"><i class="fa fa-circle text-success"></i> <php echo 'status' ?></a-->
             </div>
@@ -31,7 +33,7 @@
         <!-- sidebar menu: : style can be found in sidebar.less -->
         <ul class="sidebar-menu">
             <li>
-                <a href="../../index.html">
+                <a href="index2.php">
                     <i class="fa fa-dashboard"></i> <span>Dashboard</span>
                 </a>
             </li>
@@ -44,20 +46,17 @@
                 </a>
 
                 <ul class="treeview-menu">
-                    <li><a href="create_presupuesto.php"><i class="fa fa-angle-double-right"></i> Nuevo</a></li>
-                    <li><a href="read_user.php"><i class="fa fa-angle-double-right"></i> Verificar</a></li>
-                    <li><a href="update_user.php"><i class="fa fa-angle-double-right"></i> Avanzado</a></li>
+                    <li><a href="#"><i class="fa fa-angle-double-right"></i> Nuevo</a></li>
+                    <li><a href="#"><i class="fa fa-angle-double-right"></i> Verificar</a></li>
+                    <li><a href="#"><i class="fa fa-angle-double-right"></i> Avanzado</a></li>
                 </ul>
             </li>
 
             <li>
-                <a href="read_user.php">
+                <a href="#">
                     <i class="glyphicon glyphicon-user"></i> <span>Usuario</span>
                 </a>
                 <ul>
-                    <li><a href="create_user.php"><i class="fa fa-angle-double-right"></i> Nuevo</a></li>
-                    <li><a href="read_user.php"><i class="fa fa-angle-double-right"></i> Verificar</a></li>
-                    <li><a href="update_user.php"><i class="fa fa-angle-double-right"></i> Avanzado</a></li>
                 </ul>
             </li>
         </ul>
