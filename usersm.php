@@ -65,6 +65,29 @@ class usersm // users model todas las funciones realacionadas al mysql
         return $query= mysqli_fetch_object($data);
 
     }
+    function crear_usuario($data)
+    {
+        $switch = true;
+        $keys = array_keys($data);
+        $sql = "INSERT INTO users ( ";
+        foreach($keys as $value)
+        {
+            if($switch) $switch = false; else $sql .= ", ";
+            $sql.=  $value ;
+        }
+        $sql.= ") values (" ;
+        $switch = true;
+        foreach($keys as $value)
+        {
+            if($switch) $switch = false; else $sql .= ", ";
+            $sql.=  "'".$data[$value]."'" ;
+        }
+        $sql.=  ")" ;
+        echo $sql;
+
+
+
+    }
 }
 
 ?>

@@ -19,6 +19,26 @@ if(isset($_REQUEST['func']))
         $usersc = new usersc();
         $login = $usersc->logout_user($_REQUEST['user_id']);
     }
+    if($_REQUEST['func']==3) // toma los datos del formulario crear usuarios y lo guarda en la tabla
+    {
+        $data = array();
+        $data['f_name']= $_REQUEST['f_name'];
+        $data['l_name']= $_REQUEST['l_name'];
+        $data['email']= $_REQUEST['email'];
+        $data['id_carg']= $_REQUEST['id_carg'];
+        $data['password']= $_REQUEST['password'];
+        $data['id_tipo']= $_REQUEST['id_tipo'];
+        $file = $_FILES["user_img"];
 
+
+
+
+
+
+
+
+
+
+    }
 
 }

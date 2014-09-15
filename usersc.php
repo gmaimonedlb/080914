@@ -41,4 +41,47 @@ class usersc // users controller
 
 
     }
+    function crear_user($data , $file=null)
+    {
+
+        if(isset($file) && $file!="" && $file != null && is_file($file))
+        {
+            $allowedExts = array("gif", "jpeg", "jpg", "png");
+            $temp = explode(".", $file["name"]);
+            $extension = end($temp);
+            if ((($file["type"] == "image/gif")
+                    || ($file["type"] == "image/jpeg")
+                    || ($file["type"] == "image/jpg")
+                    || ($file["type"] == "image/pjpeg")
+                    || ($file["type"] == "image/x-png")
+                    || ($file["type"] == "image/png"))
+                && ($file["size"] < 20000)
+                && in_array($extension, $allowedExts)) {
+                if ($file["error"] > 0) {
+                    echo "Return Code: " . $file["error"] . "<br>";
+                } else {
+                    if (file_exists("img/users/" . $file["name"])) {
+                        echo $file["name"] . " already exists. ";
+                    } else {
+                        move_uploaded_file($file["tmp_name"],
+                            "img/users/" . $file["name"]);
+                        $data['image']= $file["name"];
+
+                    }
+                }
+            } else {
+                echo "Invalid file";
+            }
+        }
+        if(!is_null($this->usersm->crear_usuario($data)))
+        {
+            echo 1;
+        }else{
+            echo 0;
+        }
+
+
+    }
 }
+
+

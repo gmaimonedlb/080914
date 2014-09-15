@@ -12,7 +12,7 @@
             </div>
 
             <div class="pull-left info">
-                <p>Hello, Jane</p>
+                <p>Hello, <?php echo $_SESSION['session']->f_name; ?></p>
                 <!--p>Hola, < ?php echo $fila[1]; ?></p-->
                 <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
                 <!--a href="#"><i class="fa fa-circle text-success"></i> <php echo 'status' ?></a-->
@@ -51,7 +51,7 @@
                     <li><a href="#"><i class="fa fa-angle-double-right"></i> Avanzado</a></li>
                 </ul>
             </li>
-
+            <?php if($_SESSION['session']->create_user=='1'){ ?>
             <li>
                 <a href="#">
                     <i class="glyphicon glyphicon-user"></i> <span>Usuario</span>
@@ -59,6 +59,8 @@
                 <ul>
                 </ul>
             </li>
+            <?php } ?>
+
         </ul>
     </section>
     <!-- /.sidebar -->
