@@ -7,19 +7,19 @@
         <!-- Sidebar user panel -->
         <div class="user-panel">
             <div class="pull-left image">
-                <img src="img/avatar3.png" class="img-circle" alt="User Image" />
+                <img src="img/users/<?php echo $_SESSION['session']->image?>" class="img-circle" alt="User Image" />
                 <!--img src="<php echo 'foto.jpg' ?>" class="img-circle" alt="User Image" /-->
             </div>
 
             <div class="pull-left info">
                 <p>Hello, <?php echo $_SESSION['session']->f_name; ?></p>
                 <!--p>Hola, < ?php echo $fila[1]; ?></p-->
-                <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
+                <!--a href="#"--><i class="fa fa-circle text-success"></i> Online<!--/a-->
                 <!--a href="#"><i class="fa fa-circle text-success"></i> <php echo 'status' ?></a-->
             </div>
         </div>
 
-        <!-- search form -->
+        <!-- search form >
         <form action="#" method="get" class="sidebar-form">
             <div class="input-group">
                 <input type="text" name="q" class="form-control" placeholder="Search..."/>
@@ -53,7 +53,7 @@
             </li>
             <?php if($_SESSION['session']->create_user=='1'){ ?>
             <li>
-                <a href="#">
+                <a href="usersv_list.php">
                     <i class="glyphicon glyphicon-user"></i> <span>Usuario</span>
                 </a>
                 <ul>

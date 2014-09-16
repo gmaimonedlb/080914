@@ -25,14 +25,14 @@ class usersm // users model todas las funciones realacionadas al mysql
         $this->connection =  new createConnection();
     }
 
-    function lista_usuarios()
+    function lista_usuarios($number=null , $page=null)
     {
-        $sql = mysqli_query($this->connection->myconn,"SELECT  us.id as user_id, us.f_name, us.l_name, us.email, ca.nombre as cargo, ca.descripcion, tu.name as tipo_usu, tu.create, tu.read, tu.update, tu.delete, tu.create_user, tu.authorize   FROM tipos_user tu INNER JOIN users us ON us.id_tipo = tu.id INNER JOIN cargos ca ON ca.id = us.id_carg ");
+        $sql = mysqli_query($this->connection->myconn,"SELECT  us.id as user_id, us.f_name, us.l_name, us.email, us.id_tipo, us.id_carg, us.image, us.password, ca.nombre as cargo, ca.descripcion, tu.name as tipo_usu, tu.create, tu.read, tu.update, tu.delete, tu.create_user, tu.authorize   FROM tipos_user tu INNER JOIN users us ON us.id_tipo = tu.id INNER JOIN cargos ca ON ca.id = us.id_carg ");
         return $data = $this::genera_objeto($sql);
     }
     function busca_usuario($id)
     {
-        $sql = mysqli_query($this->connection->myconn,"SELECT  us.id as user_id, us.f_name, us.l_name, us.email, ca.nombre as cargo, ca.descripcion, tu.name as tipo_usu, tu.create, tu.read, tu.update, tu.delete, tu.create_user, tu.authorize   FROM tipos_user tu INNER JOIN users us ON us.id_tipo = tu.id INNER JOIN cargos ca ON ca.id = us.id_carg  where us.id=".$id);
+        $sql = mysqli_query($this->connection->myconn,"SELECT  us.id as user_id, us.f_name, us.l_name, us.email, us.id_tipo, us.id_carg, us.image,  us.password, ca.nombre as cargo, ca.descripcion, tu.name as tipo_usu, tu.create, tu.read, tu.update, tu.delete, tu.create_user, tu.authorize   FROM tipos_user tu INNER JOIN users us ON us.id_tipo = tu.id INNER JOIN cargos ca ON ca.id = us.id_carg  where us.id=".$id);
         return $data = $this::genera_objeto($sql);
     }
     function actualiza_usuario2($data, $id)
@@ -46,7 +46,10 @@ class usersm // users model todas las funciones realacionadas al mysql
             $sql.=  $value."= '".$data[$value]."'" ;
         }
         $sql.= " where id =".$id;
-        echo $sql;
+        if(mysqli_query($this->connection->myconn,$sql))
+            echo 1;
+        else
+            echo 0;
     }
     function borrar_ususario($id)
     {
@@ -55,38 +58,61 @@ class usersm // users model todas las funciones realacionadas al mysql
     }
     function login($user, $password)
     {
+        $user = trim($user);
+        $password = trim($password);
+
         $sql = mysqli_query($this->connection->myconn,"SELECT  us.id as user_id, us.f_name, us.l_name, us.email, us.image, ca.nombre as cargo, ca.descripcion, tu.name as tipo_usu, tu.create, tu.read, tu.update, tu.delete, tu.create_user, tu.authorize   FROM tipos_user tu INNER JOIN users us ON us.id_tipo = tu.id INNER JOIN cargos ca ON ca.id = us.id_carg where email = '$user' AND password = '$password'");
         $user = $this::genera_objeto($sql);
-        return $user;
+        return $user[0];
 
     }
     function genera_objeto($data)
     {
-        return $query= mysqli_fetch_object($data);
+        while($result = mysqli_fetch_object($data))
+        {
+            $query[] = $result;
+        }
+
+        return $query;
 
     }
     function crear_usuario($data)
     {
-        $switch = true;
-        $keys = array_keys($data);
-        $sql = "INSERT INTO users ( ";
-        foreach($keys as $value)
+        $verifica_correo = $this::verifica_correo($data['email']);
+        if($verifica_correo->num_rows<1)
         {
-            if($switch) $switch = false; else $sql .= ", ";
-            $sql.=  $value ;
-        }
-        $sql.= ") values (" ;
-        $switch = true;
-        foreach($keys as $value)
+            $switch = true;
+            $keys = array_keys($data);
+            $sql = "INSERT INTO users ( ";
+            foreach($keys as $value)
+            {
+                if($switch) $switch = false; else $sql .= ", ";
+                $sql.=  $value ;
+            }
+            $sql.= ") values (" ;
+            $switch = true;
+            foreach($keys as $value)
+            {
+                if($switch) $switch = false; else $sql .= ", ";
+                $sql.=  "'".$data[$value]."'" ;
+            }
+            $sql.=  ")" ;
+            $query = mysqli_query($this->connection->myconn, $sql);
+            if($query)
+                return 1;
+            else
+                return 0;
+        }else
         {
-            if($switch) $switch = false; else $sql .= ", ";
-            $sql.=  "'".$data[$value]."'" ;
+            return 2;
         }
-        $sql.=  ")" ;
-        echo $sql;
-
-
-
+    }
+    function verifica_correo($data)
+    {
+        $email = trim($data);
+        $sql = "SELECT * FROM `users` where email  = '$email'";
+        $query = mysqli_query($this->connection->myconn, $sql);
+        return $query;
     }
 }
 

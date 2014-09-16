@@ -1,4 +1,4 @@
-<?php session_start(); ?>
+<?php session_start();  var_dump($_SESSION['session']->create_user); ?>
 <!DOCTYPE html>
 <html>
     <head>

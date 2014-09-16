@@ -1,4 +1,5 @@
-<?php // var_dump($_SESSION['session']);?>
+<?php
+require_once('globals.php'); session_start();// var_dump($_SESSION['session']);?>
 <header class="header">
     <a href="index.html" class="logo">
         <!-- Add the class icon to your logo image or logo icon to add the margining -->
@@ -19,10 +20,10 @@
                 <!-- Notifications: style can be found in dropdown.less -->
                 <!-- Tasks: style can be found in dropdown.less -->
                 <li class="dropdown tasks-menu">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                    <!--a href="#" class="dropdown-toggle" data-toggle="dropdown">
                         <i class="fa fa-tasks"></i>
                         <span class="label label-danger">9</span>
-                    </a>
+                    </a-->
                     <ul class="dropdown-menu">
                         <li class="header">You have 9 tasks</li>
                         <li>
@@ -96,7 +97,7 @@
                     <ul class="dropdown-menu">
                         <!-- User image -->
                         <li class="user-header bg-light-blue">
-                            <img src="img/avatar3.png" class="img-circle" alt="User Image" />
+                            <img src="img/users/<?php echo $_SESSION['session']->image?>" class="img-circle" alt="User Image" />
                             <p>
                                 <?php echo $_SESSION['session']->f_name." ".$_SESSION['session']->l_name; ?>
                                 <small><?php echo $_SESSION['session']->cargo ?></small>
@@ -116,6 +117,7 @@
     </nav>
 </header>
 
+<script src="js/jquery.2.0.2.min.js"></script>
 
 <script type="text/javascript">
     $("#session_logout").click(function(){

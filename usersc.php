@@ -12,7 +12,6 @@ class usersc // users controller
 
     function __construct()
     {
-        session_start();
         require_once('usersm.php');
         $this->usersm = new usersm();
 
@@ -44,7 +43,7 @@ class usersc // users controller
     function crear_user($data , $file=null)
     {
 
-        if(isset($file) && $file!="" && $file != null && is_file($file))
+        if(isset($file) && $file!="" && $file != null )
         {
             $allowedExts = array("gif", "jpeg", "jpg", "png");
             $temp = explode(".", $file["name"]);
@@ -55,33 +54,76 @@ class usersc // users controller
                     || ($file["type"] == "image/pjpeg")
                     || ($file["type"] == "image/x-png")
                     || ($file["type"] == "image/png"))
-                && ($file["size"] < 20000)
                 && in_array($extension, $allowedExts)) {
                 if ($file["error"] > 0) {
-                    echo "Return Code: " . $file["error"] . "<br>";
+                   // echo "Return Code: " . $file["error"] . "<br>";
+                    $error =  4;
                 } else {
-                    if (file_exists("img/users/" . $file["name"])) {
-                        echo $file["name"] . " already exists. ";
-                    } else {
-                        move_uploaded_file($file["tmp_name"],
-                            "img/users/" . $file["name"]);
+                  // if (!file_exists("img/users/" . $file["name"])) {
+                       // echo "<script> alert(".$file["name"] . " already exists.') </script>";
+                   // } else {
+                        $error = 0;
+                       move_uploaded_file($file["tmp_name"],"img/users/" . $file["name"]);
                         $data['image']= $file["name"];
 
-                    }
+                //    }
                 }
             } else {
-                echo "Invalid file";
-            }
-        }
-        if(!is_null($this->usersm->crear_usuario($data)))
-        {
-            echo 1;
-        }else{
-            echo 0;
-        }
+                $error =  4;
 
+                echo $error;
+           }
+        }
+        if($error!=4)
+            echo $this->usersm->crear_usuario($data);
 
     }
+    function busca_user($id)
+    {
+        $user= $this->usersm->busca_usuario($id);
+        return $user[0];
+
+    }
+    function edit_user($data , $file=null, $id)
+    {
+        if(isset($file) && $file!="" && $file != null )
+        {
+            $allowedExts = array("gif", "jpeg", "jpg", "png");
+            $temp = explode(".", $file["name"]);
+            $extension = end($temp);
+            if ((($file["type"] == "image/gif")
+                    || ($file["type"] == "image/jpeg")
+                    || ($file["type"] == "image/jpg")
+                    || ($file["type"] == "image/pjpeg")
+                    || ($file["type"] == "image/x-png")
+                    || ($file["type"] == "image/png"))
+                && in_array($extension, $allowedExts)) {
+                if ($file["error"] > 0) {
+                    // echo "Return Code: " . $file["error"] . "<br>";
+                    $error =  4;
+                } else {
+                    // if (!file_exists("img/users/" . $file["name"])) {
+                    // echo "<script> alert(".$file["name"] . " already exists.') </script>";
+                    // } else {
+                    $error = 0;
+                    move_uploaded_file($file["tmp_name"],"img/users/" . $file["name"]);
+                    $data['image']= $file["name"];
+
+                    //    }
+                }
+            } else {
+                $error =  4;
+
+                echo $error;
+            }
+        }else{
+            $error=0;
+        }
+        if($error!=4)
+            echo $this->usersm->actualiza_usuario2($data, $id);
+
+    }
+
 }
 
 

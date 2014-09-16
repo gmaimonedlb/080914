@@ -17,7 +17,8 @@ class createConnection //create a class for make connection
 
     function __construct()
     {
-        require_once('config.php');
+        session_start();
+        require('config.php');
         $this->host= $config['host_db'];
         $this->username = $config['user_db'];
         $this->password=$config['password_db'];
