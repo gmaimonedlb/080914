@@ -1,9 +1,11 @@
-<?php session_start();  var_dump($_SESSION['session']->create_user); ?>
+<?php
+require('includes/security.php');
+?>
 <!DOCTYPE html>
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>AdminLTE | Dashboard</title>
+        <title>DLB GROUP Worldwide | Dashboard</title>
         <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
         <!-- bootstrap 3.0.2 -->
         <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" />

@@ -1,27 +1,30 @@
-<?php
-setcookie("session", "", time()-3600);
+<?php session_start();
 if(isset($_COOKIE["session"]))
 {
+    $_SESSION['session'] = json_decode($_COOKIE['session']);
     echo "<script>window.location='index2.php'</script>";
 }
- //   setcookie('session', "hola", time() + 1*24*60*60);
+
+require('formkey.php');
+$formKey = new formKey();
 
 ?>
-
 <style>
     .bg-black
     {
-        background-image: url('img/developer/dlbbackground.jpeg');
+        background-repeat:no-repeat;
+        background-size:cover;
+        /*
         background-position: center;
         background-repeat: no-repeat;
-        background-size: 100% auto;
+        background-size: 100% auto;*/
     }
 </style>
 <!DOCTYPE html>
 <html class="bg-black">
     <head>
         <meta charset="UTF-8">
-        <title>DLBGROUP WORLDWIDE</title>
+        <title>DLB GROUP Worldwide | Dashboard</title>
         <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
         <!-- bootstrap 3.0.2 -->
         <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" />
@@ -42,6 +45,7 @@ if(isset($_COOKIE["session"]))
         <div class="form-box" id="login-box">
             <div class="header">Sign In</div>
             <form name="login" id="login" action="#" method="POST" enctype="multipart/form-data">
+                <?php $formKey->outputKey(); ?>
                 <div class="body bg-gray">
                     <div class="form-group">
                         <input type="text" name="email" id="email" class="form-control" placeholder="User"  autofocus required/>
@@ -84,7 +88,14 @@ if(isset($_COOKIE["session"]))
 </html>
 
 <script type="application/javascript">
+    function getRandomArbitrary(min, max) {
+        return Math.floor(Math.random() * (max - min + 1)) + min;
+    }
 
+    var wallpaper = ["dlb_wallpaper_01.jpg", "dlb_wallpaper_02.jpg", "dlb_wallpaper_03.jpg", "dlb_wallpaper_04.jpg"
+        , "dlb_wallpaper_05.jpg", "dlb_wallpaper_06.jpg", "dlb_wallpaper_07.jpg"];
+    var lolo = wallpaper[getRandomArbitrary(0, 6)];
+    $('.bg-black').css('background-image', 'url(img/developer/' + lolo + ')');
     $("#login").submit(function(e)
     {
         var formObj = $(this);
@@ -105,7 +116,7 @@ if(isset($_COOKIE["session"]))
                 processData:false,
                 success: function(data, textStatus, jqXHR)
                 {
-                    if(data==0) alert('Usuario / Contrasena Invalido');
+                    if(data==0){ $('#login')[0].reset(); alert('Usuario / Contrasena Invalido');   }
                     if(data==1) window.location = 'index2.php';
                 },
                 error: function(jqXHR, textStatus, errorThrown)

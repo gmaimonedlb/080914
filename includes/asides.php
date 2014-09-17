@@ -7,7 +7,7 @@
         <!-- Sidebar user panel -->
         <div class="user-panel">
             <div class="pull-left image">
-                <img src="img/users/<?php echo $_SESSION['session']->image?>" class="img-circle" alt="User Image" />
+                <img src="<?php echo $user_image_route.$image?>" class="img-circle" alt="User Image" />
                 <!--img src="<php echo 'foto.jpg' ?>" class="img-circle" alt="User Image" /-->
             </div>
 

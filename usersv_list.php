@@ -1,11 +1,11 @@
-<?php error_reporting(E_ALL ^ E_NOTICE); session_start();
+<?php require('includes/security.php');
 if($_SESSION['session']->create_user!='1') { echo "<script> alert('No tiene los privilegios necesarios'); window.location = 'index2.php'</script>"; die();}
 ?>
 <!DOCTYPE html>
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>Usuarios | DLB GROUP worldwide</title>
+        <title>DLB GROUP Worldwide | Dashboard</title>
         <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
         <!-- bootstrap 3.0.2 -->
         <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" />
@@ -101,7 +101,7 @@ if($_SESSION['session']->create_user!='1') { echo "<script> alert('No tiene los 
 
 
         <!-- jQuery 2.0.2 -->
-        <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
+        <script src="js/jquery.2.0.2.min.js"></script>
         <!-- Bootstrap -->
         <script src="js/bootstrap.min.js" type="text/javascript"></script>
         <!-- DATA TABES SCRIPT -->
@@ -112,7 +112,27 @@ if($_SESSION['session']->create_user!='1') { echo "<script> alert('No tiene los 
         <!-- AdminLTE for demo purposes -->
         <script src="js/AdminLTE/demo.js" type="text/javascript"></script>
         <!-- page script -->
+
+        <script src="errores.js"></script>
         <script type="text/javascript">
+            function borrar(id)
+            {
+                $.ajax({
+                    url: "funciones_ajax.php",
+                    type: "POST",
+                    data:  {'id':id , 'func':5},
+                    cache: false,
+                    success: function(data, textStatus, jqXHR)
+                    {
+                        if(data==0) alert('Usuario / Contrasena Invalido')
+                        if(data==1) location.reload();
+                        if(data!=0 && data !=1) alert(error[data])
+                    },
+                    error: function(jqXHR, textStatus, errorThrown)
+                    {
+                    }
+                });
+            }
             $(function() {
                /* $("#example1").dataTable();
                 $('#example2').dataTable({

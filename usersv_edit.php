@@ -1,4 +1,5 @@
-<?php error_reporting(E_ALL ^ E_NOTICE); session_start();
+<?php
+require('includes/security.php');
 if($_SESSION['session']->create_user!='1') { echo "<script> alert('No tiene los privilegios necesarios'); window.location = 'index2.php'</script>"; die();}
 ?>
 <!DOCTYPE html>
@@ -6,7 +7,7 @@ if($_SESSION['session']->create_user!='1') { echo "<script> alert('No tiene los 
 <head>
     <meta charset="UTF-8">
     <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
-    <title>AdminLTE | Dashboard</title>
+    <title>DLB GROUP Worldwide | Dashboard</title>
     <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
     <!-- bootstrap 3.0.2 -->
     <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" />
@@ -26,8 +27,8 @@ if($_SESSION['session']->create_user!='1') { echo "<script> alert('No tiene los 
     $lista_cargos = $cargos->genera_select_cargos($user->id_carg);
     $tipos = new tiposc();
     $lista_tipos = $tipos->genera_select_tipos($user->id_tipo);
-    //var_dump($lista_tipos);
-    ?>
+    require('formkey.php');
+    $formKey = new formKey();    ?>
 </head>
 
 <body class="skin-blue">
@@ -65,6 +66,7 @@ if($_SESSION['session']->create_user!='1') { echo "<script> alert('No tiene los 
                             <!-- form start -->
                             <form role="form" id="cuser" name="cuser" action="#" method="POST" enctype="multipart/form-data">
                                 <input type="hidden" name="id" id="id" value="<?php echo $user->user_id ?>" >
+                                <?php $formKey->outputKey(); ?>
 
                                 <div class="box-body">
                                     <div class="input-group">
@@ -80,6 +82,8 @@ if($_SESSION['session']->create_user!='1') { echo "<script> alert('No tiene los 
                                     <div class="input-group">
                                         <span class="input-group-addon"><i class="fa fa-envelope"></i></span>
                                         <input type="text" class="form-control" placeholder="Email @dlbgroup.com" id="email" name="email" value="<?php echo $user->email?>">
+                                        <input type="hidden" name="email_old" id="email_old" value="<?php echo $user->email ?>" >
+
                                     </div>
                                     <br/>
                                     <div class="input-group">

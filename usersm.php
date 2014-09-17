@@ -37,24 +37,27 @@ class usersm // users model todas las funciones realacionadas al mysql
     }
     function actualiza_usuario2($data, $id)
     {
-        $switch = true;
-        $keys = array_keys($data);
-        $sql = "UPDATE users set ";
-        foreach($keys as $value)
-        {
-            if($switch) $switch = false; else $sql .= ", ";
-            $sql.=  $value."= '".$data[$value]."'" ;
-        }
-        $sql.= " where id =".$id;
-        if(mysqli_query($this->connection->myconn,$sql))
-            echo 1;
-        else
-            echo 0;
+         $switch = true;
+         $keys = array_keys($data);
+         $sql = "UPDATE users set ";
+         foreach($keys as $value)
+         {
+             if($switch) $switch = false; else $sql .= ", ";
+             $sql.=  $value."= '".$data[$value]."'" ;
+         }
+         $sql.= " where id =".$id;
+         if(mysqli_query($this->connection->myconn,$sql))
+             echo 1;
+          else
+             echo 0;
     }
     function borrar_ususario($id)
     {
-        $sql = mysqli_query($this->connection->myconn,"DELETE FROM users us where us.id=".$id);
 
+        if(mysqli_query($this->connection->myconn,"DELETE FROM users where id=".(int)$id))
+            return 1;
+        else
+            printf("Errormessage: %s\n", mysqli_error($this->connection->myconn));
     }
     function login($user, $password)
     {

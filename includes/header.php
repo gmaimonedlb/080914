@@ -1,7 +1,7 @@
 <?php
 require_once('globals.php'); session_start();// var_dump($_SESSION['session']);?>
 <header class="header">
-    <a href="index.html" class="logo">
+    <a href="index2.php" class="logo">
         <!-- Add the class icon to your logo image or logo icon to add the margining -->
         DLB GROUP worldwide
     </a>
@@ -97,7 +97,8 @@ require_once('globals.php'); session_start();// var_dump($_SESSION['session']);?
                     <ul class="dropdown-menu">
                         <!-- User image -->
                         <li class="user-header bg-light-blue">
-                            <img src="img/users/<?php echo $_SESSION['session']->image?>" class="img-circle" alt="User Image" />
+                            <?php if($_SESSION['session']->image !="") $image = $_SESSION['session']->image; else $image = $user_default ?>
+                            <img src="<?php echo $user_image_route.$image?>" class="img-circle" alt="User Image" />
                             <p>
                                 <?php echo $_SESSION['session']->f_name." ".$_SESSION['session']->l_name; ?>
                                 <small><?php echo $_SESSION['session']->cargo ?></small>

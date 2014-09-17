@@ -5,7 +5,7 @@
  * Date: 9/10/14
  * Time: 5:18 PM
  */
-
+error_reporting(E_ALL ^ E_NOTICE);
 class createConnection //create a class for make connection
 {
 

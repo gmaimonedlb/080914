@@ -84,7 +84,7 @@ class usersc // users controller
         return $user[0];
 
     }
-    function edit_user($data , $file=null, $id)
+    function edit_user($data , $file=null, $id , $switch = false)
     {
         if(isset($file) && $file!="" && $file != null )
         {
@@ -120,7 +120,31 @@ class usersc // users controller
             $error=0;
         }
         if($error!=4)
-            echo $this->usersm->actualiza_usuario2($data, $id);
+        {
+            $verifica_correo = $this->usersm->verifica_correo($data['email']);
+            if($verifica_correo->num_rows<1 || $switch)
+            {
+                echo $this->usersm->actualiza_usuario2($data, $id);
+            }else{
+                echo 2;
+            }
+        }
+
+
+    }
+    function delete_user($id)
+    {
+        if($_SESSION['session']->user_id != $id)
+        {
+            if($_SESSION['session']->delete=='1')
+                $query = $this->usersm->borrar_ususario($id);
+            else
+                $query = 0;
+            return $query;
+        }else{
+            echo 6;
+        }
+
 
     }
 
