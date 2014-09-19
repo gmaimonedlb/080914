@@ -94,6 +94,12 @@ if(isset($_REQUEST['func']))
 
 
     }
+    if($_REQUEST['func']==6) //autosave presupuesto
+    {
+        var_dump($_REQUEST['interests']);
+        var_dump($_REQUEST['interests1']);
+
+    }
 
 
 }
