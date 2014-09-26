@@ -7,6 +7,7 @@
  */
 session_start();
 require_once('usersc.php');
+require_once('departamentosc.php');
 require('formkey.php');
 
 
@@ -98,6 +99,24 @@ if(isset($_REQUEST['func']))
     {
         var_dump($_REQUEST['interests']);
         var_dump($_REQUEST['interests1']);
+
+    }
+    if($_REQUEST['func']==7) //traer la data de un select
+    {
+
+        $departamentosc = new departamentosc();
+        $listado_depar= $departamentosc->lista_departamentos();
+        echo (json_encode($listado_depar));
+
+
+    }
+    if($_REQUEST['func']==8) //traer la data de un select
+    {
+
+        $departamentosc = new departamentosc();
+        $listado_depar= $departamentosc->select_departamentos();
+        //echo (json_encode($listado_depar));
+
 
     }
 
