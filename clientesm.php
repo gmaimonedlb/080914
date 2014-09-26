@@ -36,8 +36,8 @@ class clientesm // users model todas las funciones realacionadas al mysql
         return $query;
     }
     function lista_clientes(){
-        $sql = mysqli_query($this->connection->myconn,"SELECT cpu.id_client, cpu.id_user, cli.id, cli.nombre
-FROM clientes_por_usuario cpu INNER JOIN clientes cli ON cpu.id_client = cli.id INNER JOIN users usu ON cpu.id_user = usu.id order by cli.nombre ASC");
+        $sql = mysqli_query($this->connection->myconn,"SELECT cpu.id_client as id_clientcpu, cpu.id_user, cli.id as id_client, cli.nombre
+FROM clientes_por_usuario cpu right outer JOIN clientes cli ON cpu.id_client = cli.id order by cli.nombre ASC");
         //$sql = mysqli_query($this->connection->myconn,"SELECT * FROM clientes_por_usuario cpu inner join users us on cpu.id_user = us.id");
         return $data = $this::genera_array($sql);
     }
@@ -48,6 +48,14 @@ FROM clientes_por_usuario cpu INNER JOIN clientes cli ON cpu.id_client = cli.id 
     function clientes_demas($id){
         $sql = mysqli_query($this->connection->myconn,"SELECT id_user FROM  `clientes_por_usuario` WHERE id_user <> " . $id);
         return $data = $this::genera_array($sql);
+    }
+    function actualiza_clientes($data){
+        $borra = mysqli_query($this->connection->myconn,"DELETE FROM  `clientes_por_usuario` where id_user = " . $data['id_user']);
+        foreach($data['data'] as $value)
+        {
+            $actualiza = mysqli_query($this->connection->myconn,"INSERT INTO `clientes_por_usuario` (id_user, id_client) values ('".$data['id_user']."', '".$value."') " );
+        }
+        return 1;
     }
 }
 //$sql = mysqli_query($this->connection->myconn,"");

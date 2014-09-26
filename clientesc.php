@@ -51,60 +51,27 @@ class clientesc // users controller
 
             }
 
-            $option[] = '<input type=checkbox  name=' . $value['id_client'] . '  ' . $selected ." ".$disable . '> ' . $value['nombre'] . '<br /> ';
+            $option[] = '<input type=checkbox name="id[]" id="' . $value['id_client'] . '"  value=' . $value['id_client'] . '  ' . $selected ." ".$disable . '> ' . $value['nombre'] . '<br /> ';
         }
+
         return $option;
-
-
-
-
-
-
- /*
-            echo  $selected ." ".$disable;
-         $option[] = '<label><input type=checkbox class="flat-red" name=' . $value['id_client'] . '  ' . $selected ." ".$disable . '> ' . $value['n_client'] . '</label><br /> ';
-        }
-        return $option;*/
-
-
-
-
     }
-/*    function genera_checkboxes_clientes($id_user)
+    function guardar($data)
     {
-       // va a recibir id de user
-        $selected = "";
-        $lista = $this->clientesm->lista_clientes();
-        //var_dump($lista);
-        foreach( $lista as $value)
-        {
-            if($id_user == $value->id)
-                $selected = " selected";
-            else 
-                $selected="";
+        $this->clientesm->actualiza_clientes($data);
 
-            $option[] = '<label><input type=checkbox class="flat-red" name=' . $value->id . '  ' . $selected . '> ' . $value->nombre . '</label><br /> ';
-        }
-        return $option;
-    }//genera_chkbx clientes propios
-    
-    function lista_clientes(){
-        $result = this->clientesm->lista_clientes();
-        
-        var_dump($result);
     }
-    
 
-    function genera_checkboxes_noclientes($id_user){
-        foreach( $lista as $value)
-        {
-            if($id_user == $value->id)
-                $selected = " selected";
-            else
-                $selected="";
 
-            $option[] = '<label><input type=checkbox class="flat-red" name=' . $value->id . '  ' . $selected . '> ' . $value->nombre . '</label><br /> ';
-        } // foreach
-    } // gen_chk_no*/
+
+
+
+
+
+
+
+
+
+
     
 } // clientesc

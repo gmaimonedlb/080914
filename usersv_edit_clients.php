@@ -18,8 +18,7 @@ if($_SESSION['session']->create_user!='1') { echo "<script> alert('No tiene los 
     <!-- Theme style -->
     <link href="css/AdminLTE.css" rel="stylesheet" type="text/css" />
     <?php
-    require('formkey.php');
-    $formKey = new formKey();
+
     require('clientesc.php');
     require('usersc.php');
     $userc = new usersc();
@@ -61,10 +60,6 @@ if($_SESSION['session']->create_user!='1') { echo "<script> alert('No tiene los 
                         <div class="box-body">
 
                             <!-- form start -->
-                            <form role="form" id="cuser" name="cuser" action="#" method="POST" enctype="multipart/form-data">
-                                <input type="hidden" name="id" id="id" value="<?php echo $user->user_id ?>" >
-                                <?php $formKey->outputKey(); ?>
-
                                 <div class="box-body">
                                     <div class="input-group">
                                         <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
@@ -78,7 +73,10 @@ if($_SESSION['session']->create_user!='1') { echo "<script> alert('No tiene los 
                                         <input type="hidden" name="email_old" id="email_old" value="<?php echo $user->email ?>" >
                                     </div>
                                     <br/>
+                                    <form role="form" id="user-client" name="user-client" action="#" method="POST" enctype="multipart/form-data">
+                                        <input type="hidden" name="id_user" id="id_user" value="<?php echo $user->user_id ?>" >
 
+                                    <div class="box box-primary page-scroll">
                                     <div class="box-body">
                                         <!-- Minimal red style --><h3 class="box-title">Clientes</h3>
                                         <div class="form-group">
@@ -86,6 +84,7 @@ if($_SESSION['session']->create_user!='1') { echo "<script> alert('No tiene los 
                                             <?php foreach($lista_clientes as $value){ echo $value; } ?>
                                         </div>
                                     </div><!-- /.box-body -->
+                                   </div>
                                     <div class="box-footer">
                                         <button type="submit" class="btn btn-info btn-sm pull-right" style="width:150px">Guardar</button><br/>
                                     </div>
@@ -113,10 +112,10 @@ if($_SESSION['session']->create_user!='1') { echo "<script> alert('No tiene los 
 </html>
 
 <script type="application/javascript">
-    $("#cuser").submit(function(e)
+    $("#user-client").submit(function(e)
     {
         var formObj = $(this);
-        var formURL = "funciones_ajax.php?func=4";
+        var formURL = "funciones_ajax.php?func=9";
         //   var formURL = formObj.attr("action");
 
         if(window.FormData !== undefined)  // for HTML5 browsers

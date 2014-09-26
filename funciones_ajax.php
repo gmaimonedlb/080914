@@ -8,6 +8,8 @@
 session_start();
 require_once('usersc.php');
 require_once('departamentosc.php');
+require_once('clientesc.php');
+
 require('formkey.php');
 
 
@@ -115,10 +117,26 @@ if(isset($_REQUEST['func']))
 
         $departamentosc = new departamentosc();
         $listado_depar= $departamentosc->select_departamentos();
-        //echo (json_encode($listado_depar));
 
 
     }
+    if($_REQUEST['func']==9) //actualiza la tabla cliente usuario borrando los clientes actuales y creando de cero los seleccionados
+    {
+        $data = array('data'=>$_REQUEST['id'], 'id_user'=>$_REQUEST['id_user']);
+        $clientesc = new clientesc();
+        $guarda = $clientesc->guardar($data);
 
+
+    }
+    if($_REQUEST['func']==10) //actualiza la tabla cliente usuario borrando los clientes actuales y creando de cero los seleccionados
+    {
+        $clientesc = new clientesc();
+
+        $lista_clientes = $clientesc->lista_clientes($_REQUEST['id']);
+
+var_dump($lista_clientes);
+
+
+    }
 
 }

@@ -32,6 +32,13 @@ class departamentosc // users controller
         $data= $this->departamentosm->lista_departamentos();
         echo ("<option value =''>..</option>");
 
+/*<div class="form-group">
+                                            <?php echo $value->id_user ?>
+<?php foreach($lista_clientes as $value){ echo $value; } ?>
+</div>
+*/
+
+
         foreach($data as $value)
         {
             echo ("<option value ='". $value->id."'>".$value->nombre."</option>");
