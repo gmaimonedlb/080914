@@ -45,7 +45,7 @@ if($_SESSION['session']->create_user!='1') { echo "<script> alert('No tiene los 
             <ol class="breadcrumb">
                 <li><a href="index2.php"><i class="fa fa-home"></i> Home</a></li>
                 <li><a href="usersv_list.php">Usuarios</a></li>
-                <li class="active">Editar</li>
+                <li class="active">Asignar Clientes</li>
             </ol>
         </section>
 

@@ -73,6 +73,8 @@ if($_SESSION['session']->create_user!='1') { echo "<script> alert('No tiene los 
                                                 <td><?php echo $value->email?></td>
                                                 <td><a href="usersv_edit.php?id=<?php echo $value->user_id ?>" class="btn btn-warning btn-xs">Editar</a>&nbsp;
                                                     <a class="btn btn-danger btn-xs" onclick="borrar(<?php echo $value->user_id?>)">Borrar</a>
+                                                    <a href="usersv_edit_clients.php?id=<?php echo $value->user_id?>" class="btn btn-primary btn-xs">Asignar Clientes <i class="fa fa-plus"></i></a>
+
                                                 </td>
                                             </tr>
                                             <?php } ?>
